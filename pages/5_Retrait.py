@@ -44,11 +44,11 @@ for df, cols in [(stock_df, ["Produit", "Quantité", "Date"]),
 stock_df["Date"] = pd.to_datetime(stock_df["Date"], errors="coerce")
 prod_df["Date"] = pd.to_datetime(prod_df["Date"], errors="coerce")
 today = datetime.today().date()
-periode_recente = [today - timedelta(days=i) for i in range(0, 4)]
+periode_recente = [today - timedelta(days=i) for i in range(1, 3)]
 periode_7j = [today - timedelta(days=i) for i in range(1, 8)]
 
 # === PARTIE 1 : RETRAITS AUTOMATIQUES ===
-st.subheader("🔎 Retraits automatiques des produits anciens (> 4 jours)")
+st.subheader("🔎 Retraits automatiques des produits anciens (> 3 jours)")
 
 stock_today = stock_df[stock_df["Date"].dt.date == today]
 stock_grouped = stock_today.groupby("Produit")["Quantité"].sum()
