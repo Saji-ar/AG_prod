@@ -145,7 +145,7 @@ for df, cols in [(stock_df, ["Produit", "Quantité", "Date"]),
 stock_df["Date"] = pd.to_datetime(stock_df["Date"], errors="coerce")
 prod_df["Date"] = pd.to_datetime(prod_df["Date"], errors="coerce")
 today = datetime.today().date()
-periode_recente = [today - timedelta(days=i) for i in range(1, 5)]
+periode_recente = [today - timedelta(days=i) for i in range(0, 4)]
 periode_7j = [today - timedelta(days=i) for i in range(1, 8)]
 
 # === PARTIE 1 : RETRAITS AUTOMATIQUES ===
@@ -178,11 +178,11 @@ for produit, quantite_stock in stock_grouped.items():
         with col2:
             if st.button("✅ Valider retrait", key=f"{produit}_{surplus}"):
                 retrait_ws.append_row([
-                    produit, -int(surplus), str(today), "", "Ancien > 4 jours"
+                    produit, int(surplus), str(today), "", "Ancien > 4 jours"
                 ])
-                stock_ws.append_row([
-                    produit, -int(surplus), str(today)
-                ])
+                # stock_ws.append_row([
+                #     produit, -int(surplus), str(today)
+                # ])
                 st.success(f"Retrait validé pour {int(surplus)} {produit}")
 
 # === PARTIE 2 : RETRAIT MANUEL ===
@@ -202,9 +202,9 @@ date_retrait = st.date_input("Date du retrait", value=today)
 
 if st.button("📤 Enregistrer le retrait manuel"):
     retrait_ws.append_row([
-        produit_sel, -int(quantite_retrait), str(date_retrait), str(date_prod), raison
+        produit_sel, int(quantite_retrait), str(date_retrait), str(date_prod), raison
     ])
-    stock_ws.append_row([
-        produit_sel, -int(quantite_retrait), str(date_retrait)
-    ])
+    # stock_ws.append_row([
+    #     produit_sel, -int(quantite_retrait), str(date_retrait)
+    # ])
     st.success(f"{quantite_retrait} {produit_sel} retiré manuellement ✔️")
