@@ -1,111 +1,3 @@
-# import streamlit as st
-# import pandas as pd
-# from datetime import datetime, timedelta
-# import os
-
-# st.title("🗑️ Retrait des produits")
-
-# # Chargement des fichiers
-# if not os.path.exists("stock_boutique.xlsx") or not os.path.exists("production.xlsx"):
-#     st.warning("Fichiers requis manquants.")
-#     st.stop()
-
-# stock_df = pd.read_excel("stock_boutique.xlsx")
-# prod_df = pd.read_excel("production.xlsx")
-
-# # Chargement ou création du fichier de retraits
-# retrait_file = "retrait.xlsx"
-# if os.path.exists(retrait_file):
-#     retrait_df = pd.read_excel(retrait_file)
-# else:
-#     retrait_df = pd.DataFrame(columns=["Produit", "Quantité", "Date de retrait", "Date de production", "Raison"])
-
-# # Formatage des dates
-# stock_df["Date"] = pd.to_datetime(stock_df["Date"])
-# prod_df["Date"] = pd.to_datetime(prod_df["Date"])
-# today = datetime.today().date()
-# periode_recente = [today - timedelta(days=i) for i in range(1, 5)]
-# periode_7j = [today - timedelta(days=i) for i in range(1, 8)]
-
-# # === PARTIE 1 : RETRAITS AUTOMATIQUES ===
-# st.subheader("🔎 Retraits automatiques des produits anciens (> 4 jours)")
-
-# # Stock enregistré aujourd’hui, groupé par produit
-# stock_today = stock_df[stock_df["Date"].dt.date == today]
-# stock_grouped = stock_today.groupby("Produit")["Quantité"].sum()
-
-# # Retraits manuels récents (avec date de prod) : à réintégrer
-# retrait_recents = retrait_df[
-#     retrait_df["Date de production"].notna() &
-#     retrait_df["Date de production"].isin(periode_recente)
-# ].groupby("Produit")["Quantité"].sum().abs()
-
-# for produit, quantite_stock in stock_grouped.items():
-#     quantite_produite = prod_df[
-#         (prod_df["Produit"] == produit) &
-#         (prod_df["Date"].dt.date.isin(periode_recente))
-#     ]["Quantité"].sum()
-
-#     quantite_produite += retrait_recents.get(produit, 0)
-#     surplus = quantite_stock - quantite_produite
-
-#     if surplus <= 0:
-#         continue
-
-#     with st.container():
-#         col1, col2 = st.columns([4, 1])
-#         with col1:
-#             st.markdown(f"🔻 **{produit}** – À retirer : `{int(surplus)}` unités (anciens)")
-#         with col2:
-#             if st.button("✅ Valider retrait", key=f"{produit}_{surplus}"):
-#                 retrait_ligne = pd.DataFrame([{
-#                     "Produit": produit,
-#                     "Quantité": -surplus,
-#                     "Date de retrait": today,
-#                     "Date de production": None,
-#                     "Raison": "Ancien > 4 jours"
-#                 }])
-#                 retrait_df = pd.concat([retrait_df, retrait_ligne], ignore_index=True)
-#                 retrait_df.to_excel(retrait_file, index=False)
-
-#                 retrait_stock = pd.DataFrame([[produit, -surplus, today]], columns=["Produit", "Quantité", "Date"])
-#                 stock_df = pd.concat([stock_df, retrait_stock], ignore_index=True)
-#                 stock_df.to_excel("stock_boutique.xlsx", index=False)
-#                 st.success(f"Retrait validé pour {int(surplus)} {produit}")
-
-# # === PARTIE 2 : RETRAIT MANUEL ===
-# st.subheader("✋ Retrait manuel d’un produit")
-
-# # Produits produits dans les 7 derniers jours
-# produits_7j = prod_df[prod_df["Date"].dt.date.isin(periode_7j)]["Produit"].dropna().unique().tolist()
-# produits_7j.append("Autre")
-# produit_sel = st.selectbox("Produit à retirer", produits_7j)
-
-# if produit_sel == "Autre":
-#     produit_sel = st.text_input("Nom du produit (personnalisé)")
-
-# quantite_retrait = st.number_input("Quantité à retirer", min_value=1, step=1)
-# date_prod = st.date_input("Date de production", max_value=today)
-# raison = st.text_input("Raison du retrait")
-
-# date_retrait = st.date_input("Date du retrait", value=today)
-
-# if st.button("📤 Enregistrer le retrait manuel"):
-#     retrait_ligne = pd.DataFrame([{
-#         "Produit": produit_sel,
-#         "Quantité": quantite_retrait,
-#         "Date de retrait": date_retrait,
-#         "Date de production": date_prod,
-#         "Raison": raison
-#     }])
-#     retrait_df = pd.concat([retrait_df, retrait_ligne], ignore_index=True)
-#     retrait_df.to_excel(retrait_file, index=False)
-
-#     # retrait_stock = pd.DataFrame([[produit_sel, -quantite_retrait, today]], columns=["Produit", "Quantité", "Date"])
-#     # stock_df = pd.concat([stock_df, retrait_stock], ignore_index=True)
-#     # stock_df.to_excel("stock_boutique.xlsx", index=False)
-
-#     st.success(f"{quantite_retrait} {produit_sel} retiré manuellement ✔️")
 
 
 import streamlit as st
@@ -116,10 +8,17 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 st.title("🗑️ Retrait des produits")
 
-# Authentification Google
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
-         "https://www.googleapis.com/auth/drive"]
-credentials = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+import os
+
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+
+if "gcp_service_account" in st.secrets:
+    # ✅ Streamlit Cloud : utiliser secrets
+    credentials = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gcp_service_account"], scope)
+else:
+    # ✅ Local : utiliser fichier json
+    credentials = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+
 client = gspread.authorize(credentials)
 
 # Chargement des feuilles

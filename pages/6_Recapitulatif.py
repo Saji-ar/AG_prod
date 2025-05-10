@@ -6,10 +6,17 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 st.title("📊 Récapitulatif journalier des produits")
 
-# Authentification Google
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
-         "https://www.googleapis.com/auth/drive"]
-credentials = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+import os
+
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+
+if "gcp_service_account" in st.secrets:
+    # ✅ Streamlit Cloud : utiliser secrets
+    credentials = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gcp_service_account"], scope)
+else:
+    # ✅ Local : utiliser fichier json
+    credentials = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
+
 client = gspread.authorize(credentials)
 
 # Feuilles
