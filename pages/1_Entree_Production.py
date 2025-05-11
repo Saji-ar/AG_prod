@@ -41,13 +41,17 @@ for _, row in produits_df.iterrows():
         liste_produits.append(nom)
 
 liste_produits.append("Autre")
-produit = st.selectbox("Sélectionner un produit", liste_produits)
-
+produit = st.selectbox("Sélectionner un produit", [""] + liste_produits)
+if not produit:
+    st.stop()
 if produit == "Autre":
     nom_libre = st.text_input("Nom du produit spécial")
     produit = nom_libre.strip() + " (autre)" if nom_libre.strip() else ""
 
-quantite = st.number_input("Quantité produite", min_value=0, step=1)
+quantite = st.number_input("Quantité produite", step=1)
+if quantite < 0:
+    st.warning("⚠️ Vous êtes en train de soustraire du stock.")
+
 date = st.date_input("Date d’entrée en boutique", value=datetime.today())
 
 # Ajout dans la feuille "Prod" du fichier AG_prod
