@@ -50,7 +50,11 @@ recap_rows = []
 
 for _, row in produits_df.iterrows():
     nom = row["Nom"]
-    prix = float(row.get("Prix", 0))
+    try:
+        prix = float(str(row.get("Prix", 0)).replace(",", ".").replace("€", "").strip())
+    except:
+        prix = 0.0
+        print(prix)
     sous_cats = [s.strip() for s in str(row.get("Sous-catégories", "")).split(",")] if row.get("Sous-catégories") else [""]
 
     for sc in sous_cats:

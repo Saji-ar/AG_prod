@@ -21,9 +21,11 @@ stock_ws = ag_prod.worksheet("Stock")
 produits_ws = client.open("Produits").sheet1
 
 # Chargement des données
-prod_df = pd.DataFrame(prod_ws.get_all_records())
-stock_df = pd.DataFrame(stock_ws.get_all_records())
-produits_df = pd.DataFrame(produits_ws.get_all_records())
+from utils.google_sheets import load_ws_df, load_sheet_df
+
+prod_df = load_ws_df("AG_prod", "Prod")
+stock_df = load_ws_df("AG_prod", "Stock")
+produits_df = load_sheet_df("Produits")
 
 # Nettoyage des dates
 for df, col in [(prod_df, "Date"), (stock_df, "Date")]:

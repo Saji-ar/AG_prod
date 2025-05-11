@@ -23,10 +23,14 @@ else:
 
 client = gspread.authorize(credentials)
 
+from utils.google_sheets import load_ws_df, load_sheet_df
+
+
+produits_df = load_sheet_df("Produits")
 # Lire la feuille "Produits"
-produits_ws = client.open("Produits").sheet1
-produits_data = produits_ws.get_all_records()
-produits_df = pd.DataFrame(produits_data)
+# produits_ws = client.open("Produits").sheet1
+# produits_data = produits_ws.get_all_records()
+# produits_df = pd.DataFrame(produits_data)
 
 # Construire la liste des produits / sous-catégories
 liste_produits = []
