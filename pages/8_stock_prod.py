@@ -67,9 +67,14 @@ for nom in liste_produits:
 st.subheader("📝 Modifier les valeurs pour la journée")
 
 df_edit = pd.DataFrame(donnees_initiales)
+
+if "editable" not in st.session_state:
+    st.session_state["editable"] = df_edit.copy()
+
 with st.form("form_stock_prod"):
     df_modif = st.data_editor(
-        df_edit,
+        st.session_state["editable"],
+        master
         use_container_width=True,
         num_rows="dynamic",
         key="editable"
