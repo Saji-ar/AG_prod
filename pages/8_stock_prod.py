@@ -67,10 +67,17 @@ for nom in liste_produits:
 st.subheader("📝 Modifier les valeurs pour la journée")
 
 df_edit = pd.DataFrame(donnees_initiales)
-df_modif = st.data_editor(df_edit, use_container_width=True, num_rows="dynamic", key="editable")
+with st.form("form_stock_prod"):
+    df_modif = st.data_editor(
+        df_edit,
+        use_container_width=True,
+        num_rows="dynamic",
+        key="editable"
+    )
+    submitted = st.form_submit_button("💾 Enregistrer les modifications")
 
 # Enregistrement des modifications
-if st.button("💾 Enregistrer les modifications"):
+if submitted:
     lignes_stock = []
     lignes_prod = []
 
