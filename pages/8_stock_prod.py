@@ -66,8 +66,22 @@ for nom in liste_produits:
 
 st.subheader("📝 Modifier les valeurs pour la journée")
 
-df_edit = pd.DataFrame(donnees_initiales)
-df_modif = st.data_editor(df_edit, use_container_width=True, num_rows="dynamic", key="editable")
+#df_edit = pd.DataFrame(donnees_initiales)
+#df_modif = st.data_editor(df_edit, use_container_width=True, num_rows="dynamic", key="editable")
+
+# Initialiser les données en session si absentes
+if "df_modif" not in st.session_state or st.session_state.get("last_date") != date_cible:
+    st.session_state.df_modif = pd.DataFrame(donnees_initiales)
+    st.session_state.last_date = date_cible
+
+# Éditeur de données avec cache temporaire
+df_modif = st.data_editor(
+    st.session_state.df_modif,
+    use_container_width=True,
+    num_rows="dynamic",
+    key="editable"
+)
+
 
 # Enregistrement des modifications
 if st.button("💾 Enregistrer les modifications"):
@@ -100,5 +114,8 @@ if st.button("💾 Enregistrer les modifications"):
 
     st.success("✅ Modifications enregistrées dans les feuilles.")
     st.cache_data.clear()  # Invalider le cache pour les prochaines utilisations
+    # Mise à jour des données sauvegardées
+    st.session_state.df_modif = df_modif.copy()
+
     ## test
     
