@@ -7,6 +7,11 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 st.title("🗑️ Retrait des produits")
+# Choix du jour de référence et du seuil
+st.sidebar.header("Paramètres de retrait")
+date_reference = st.sidebar.date_input("📅 Date de référence", value=datetime.today().date())
+seuil_jours = st.sidebar.number_input("⏱️ Jours avant retrait", value=3, min_value=1, max_value=30)
+
 
 import os
 
@@ -43,12 +48,20 @@ for df, cols in [(stock_df, ["Produit", "Quantité", "Date"]),
 # Format des dates
 stock_df["Date"] = pd.to_datetime(stock_df["Date"], errors="coerce")
 prod_df["Date"] = pd.to_datetime(prod_df["Date"], errors="coerce")
-today = datetime.today().date()
-periode_recente = [today - timedelta(days=i) for i in range(1, 3)]
+#today = datetime.today().date()
+today = date_reference
+
+#periode_recente = [today - timedelta(days=i) for i in range(1, 3)]
+periode_recente = [today - timedelta(days=i) for i in range(1, seuil_jours)]
+
 periode_7j = [today - timedelta(days=i) for i in range(1, 8)]
 
 # === PARTIE 1 : RETRAITS AUTOMATIQUES ===
-st.subheader("🔎 Retraits automatiques des produits anciens (> 3 jours)")
+
+
+st.subheader(f"🔎 Retraits automatiques des produits anciens (> {seuil_jours} jours)")
+
+
 
 stock_today = stock_df[stock_df["Date"].dt.date == today]
 stock_grouped = stock_today.groupby("Produit")["Quantité"].sum()
