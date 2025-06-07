@@ -22,9 +22,7 @@ def charger_donnees_initiales():
     prod_df = pd.DataFrame(prod)
     stock_df = pd.DataFrame(stock)
 
-    print(produits_df)
-    print(prod_df)
-    print(stock_df)
+
 
     for df, col in [(prod_df, "date"), (stock_df, "date")]:
         df[col] = pd.to_datetime(df[col], errors="coerce").dt.date
@@ -39,7 +37,7 @@ date_limite = datetime.today().date() - timedelta(days=7)
 
 # Liste des produits : catalogue + autres récents
 produits_ref = []
-for _, row in produits_df.iterrows():
+for _, row in produits_df[produits_df["permanent"] == True].iterrows():
     nom = row["nom"]
     sous_cats = [s.strip() for s in str(row.get("sous_categories", "")).split(",")] if row.get("sous_categories") else [""]
     for sc in sous_cats:
@@ -52,7 +50,6 @@ for df in [prod_df, stock_df]:
 autres = list(produits_7j - set(produits_ref))
 
 liste_produits = sorted(set(produits_ref + autres))
-st.write(stock_df.columns)
 
 # Données pour la date choisie
 donnees_initiales = []
@@ -87,9 +84,20 @@ if st.button("💾 Enregistrer les modifications"):
 
     for i, row in df_modif.iterrows():
         nom = str(row["Produit"]).strip()
-        stock_new = int(row["Stock"])
-        prod_new = int(row["Production"])
+        stock_new = int(row["Stock"]) if pd.notna(row["Stock"]) else 0
+        prod_new = int(row["Production"]) if pd.notna(row["Production"]) else 0
 
+        # Sauter si tout est à zéro
+        if stock_new == 0 and prod_new == 0:
+            continue
+
+        # Ajouter produit temporaire s'il n'existe pas
+        if nom not in produits_df["nom"].values :
+            supabase.table("produits").insert({
+                "nom": nom.split(" / ")[0],
+                "permanent": False
+            }).execute()
+            produits_ref.append(nom)  # éviter réinsertion si plusieurs lignes
 
         old = next((r for r in donnees_initiales if r["Produit"] == row["Produit"]), {"Stock": 0, "Production": 0})
         diff_stock = stock_new - int(old["Stock"])
@@ -99,6 +107,7 @@ if st.button("💾 Enregistrer les modifications"):
             lignes_stock.append({"produit": nom, "quantite": diff_stock, "date": str(date_cible)})
         if diff_prod != 0:
             lignes_prod.append({"produit": nom, "quantite": diff_prod, "date": str(date_cible)})
+
 
     # Envoi dans Supabase
     for ligne in lignes_stock:
