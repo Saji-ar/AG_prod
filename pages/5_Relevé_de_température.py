@@ -31,7 +31,7 @@ if not user_name:
         if user_name:
             save_user_name(user_name)
             st.success(f"Bienvenue {user_name} !")
-            st.experimental_rerun()
+            #st.experimental_rerun()
 else:
     st.markdown(f"👤 Connecté en tant que **{user_name}**")
 
