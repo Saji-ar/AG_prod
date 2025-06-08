@@ -1,83 +1,83 @@
-
-
 import streamlit as st
 import pandas as pd
 from datetime import datetime, timedelta
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+from supabase import create_client, Client
 
 st.title("🗑️ Retrait des produits")
+
+# Connexion Supabase
+url = st.secrets["SUPABASE_URL"]
+key = st.secrets["SUPABASE_KEY"]
+supabase: Client = create_client(url, key)
+
 # Choix du jour de référence et du seuil
 st.sidebar.header("Paramètres de retrait")
-date_reference = st.sidebar.date_input("📅 Date de référence", value=datetime.today().date())
+date_reference = st.sidebar.date_input("🗕️ Date de référence", value=datetime.today().date())
 seuil_jours = st.sidebar.number_input("⏱️ Jours avant retrait", value=3, min_value=1, max_value=30)
+today = date_reference  # déjà défini avec st.date_input
+seuil_date = today - timedelta(days=seuil_jours)
+date_7j = today - timedelta(days=7)
 
+# Chargement des données Supabase
+prod_resp = supabase.table("Prod")\
+    .select("*")\
+    .gte("date", str(date_7j))\
+    .execute()
+prod_df = pd.DataFrame(prod_resp.data)
 
-import os
+# Requête optimisée pour Stock : uniquement la date du jour sélectionné
+stock_resp = supabase.table("Stock")\
+    .select("*")\
+    .eq("date", str(today))\
+    .execute()
+stock_df = pd.DataFrame(stock_resp.data)
 
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-
-if "gcp_service_account" in st.secrets:
-    # ✅ Streamlit Cloud : utiliser secrets
-    credentials = ServiceAccountCredentials.from_json_keyfile_dict(st.secrets["gcp_service_account"], scope)
-else:
-    # ✅ Local : utiliser fichier json
-    credentials = ServiceAccountCredentials.from_json_keyfile_name("service_account.json", scope)
-
-client = gspread.authorize(credentials)
-
-# Chargement des feuilles
-ag_prod = client.open("AG_prod")
-prod_ws = ag_prod.worksheet("Prod")
-stock_ws = ag_prod.worksheet("Stock")
-retrait_ws = ag_prod.worksheet("Retrait")
-
-# Récupération des données
-prod_df = pd.DataFrame(prod_ws.get_all_records())
-stock_df = pd.DataFrame(stock_ws.get_all_records())
-retrait_df = pd.DataFrame(retrait_ws.get_all_records())
-
-# Assurer cohérence des colonnes si vide
-for df, cols in [(stock_df, ["Produit", "Quantité", "Date"]),
-                 (prod_df, ["Produit", "Quantité", "Date"]),
-                 (retrait_df, ["Produit", "Quantité", "Date de retrait", "Date de production", "Raison"])]:
-    for col in cols:
-        if col not in df.columns:
-            df[col] = None
+# Requête optimisée pour Retrait : uniquement les lignes où "date_de_production" est dans les jours récents
+retrait_resp = supabase.table("Retrait")\
+    .select("*")\
+    .gte("date_de_retrait", str(seuil_date))\
+    .execute()
+retrait_df = pd.DataFrame(retrait_resp.data)
 
 # Format des dates
-stock_df["Date"] = pd.to_datetime(stock_df["Date"], errors="coerce")
-prod_df["Date"] = pd.to_datetime(prod_df["Date"], errors="coerce")
-#today = datetime.today().date()
-today = date_reference
+stock_df["date"] = pd.to_datetime(stock_df["date"], errors="coerce")
+prod_df["date"] = pd.to_datetime(prod_df["date"], errors="coerce")
+retrait_df["date_de_production"] = pd.to_datetime(retrait_df.get("date_de_production", pd.NaT), errors="coerce")
+retrait_df["date_de_retrait"] = pd.to_datetime(retrait_df.get("date_de_retrait", pd.NaT), errors="coerce")
 
-#periode_recente = [today - timedelta(days=i) for i in range(1, 3)]
+# Périodes utiles
 periode_recente = [today - timedelta(days=i) for i in range(1, seuil_jours)]
-
 periode_7j = [today - timedelta(days=i) for i in range(1, 8)]
 
 # === PARTIE 1 : RETRAITS AUTOMATIQUES ===
-
-
 st.subheader(f"🔎 Retraits automatiques des produits anciens (> {seuil_jours} jours)")
 
+stock_today = stock_df[stock_df["date"].dt.date == today]
+
+stock_grouped = stock_today.groupby("produit")["quantite"].sum()
 
 
-stock_today = stock_df[stock_df["Date"].dt.date == today]
-stock_grouped = stock_today.groupby("Produit")["Quantité"].sum()
 
 retrait_recents = retrait_df[
-    retrait_df["Date de production"].notna() &
-    retrait_df["Date de production"].isin(periode_recente)
-].groupby("Produit")["Quantité"].sum().abs()
+    retrait_df["date_de_production"].notna() & 
+    retrait_df["date_de_production"].apply(lambda x: isinstance(x, datetime)) & 
+    retrait_df["date_de_production"].dt.date.isin(periode_recente)
+].groupby("produit")["quantite"].sum().abs()
+
+retrait_today = retrait_df[
+    retrait_df["date_de_retrait"].dt.date == today
+].groupby("produit")["quantite"].sum().abs()
+
+
+
 
 for produit, quantite_stock in stock_grouped.items():
     quantite_produite = prod_df[
-        (prod_df["Produit"] == produit) &
-        (prod_df["Date"].dt.date.isin(periode_recente))
-    ]["Quantité"].sum()
+        (prod_df["produit"] == produit) &
+        (prod_df["date"].dt.date.isin(periode_recente))
+    ]["quantite"].sum()
 
-    quantite_produite += retrait_recents.get(produit, 0)
+    quantite_produite += retrait_recents.get(produit, 0)  + retrait_today.get(produit, 0)
     surplus = quantite_stock - quantite_produite
 
     if surplus <= 0:
@@ -89,18 +89,19 @@ for produit, quantite_stock in stock_grouped.items():
             st.markdown(f"🔻 **{produit}** – À retirer : `{int(surplus)}` unités (anciens)")
         with col2:
             if st.button("✅ Valider retrait", key=f"{produit}_{surplus}"):
-                retrait_ws.append_row([
-                    produit, int(surplus), str(today), "", "Ancien > 4 jours"
-                ])
-                # stock_ws.append_row([
-                #     produit, -int(surplus), str(today)
-                # ])
+                supabase.table("Retrait").insert({
+                    "produit": produit,
+                    "quantite": int(surplus),
+                    "date_de_retrait": str(today),
+                    "date_de_production": None,
+                    "raison": f"Ancien > {seuil_jours} jours"
+                }).execute()
                 st.success(f"Retrait validé pour {int(surplus)} {produit}")
 
 # === PARTIE 2 : RETRAIT MANUEL ===
 st.subheader("✋ Retrait manuel d’un produit")
 
-produits_7j = prod_df[prod_df["Date"].dt.date.isin(periode_7j)]["Produit"].dropna().unique().tolist()
+produits_7j = prod_df[prod_df["date"].dt.date.isin(periode_7j)]["produit"].dropna().unique().tolist()
 produits_7j.append("Autre")
 produit_sel = st.selectbox("Produit à retirer", produits_7j)
 
@@ -113,10 +114,11 @@ raison = st.text_input("Raison du retrait")
 date_retrait = st.date_input("Date du retrait", value=today)
 
 if st.button("📤 Enregistrer le retrait manuel"):
-    retrait_ws.append_row([
-        produit_sel, int(quantite_retrait), str(date_retrait), str(date_prod), raison
-    ])
-    # stock_ws.append_row([
-    #     produit_sel, -int(quantite_retrait), str(date_retrait)
-    # ])
+    supabase.table("Retrait").insert({
+        "produit": produit_sel,
+        "quantite": int(quantite_retrait),
+        "date_de_retrait": str(date_retrait),
+        "date_de_production": str(date_prod),
+        "raison": raison
+    }).execute()
     st.success(f"{quantite_retrait} {produit_sel} retiré manuellement ✔️")
