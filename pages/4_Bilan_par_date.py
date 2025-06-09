@@ -42,7 +42,7 @@ for _, prod in produits_df.iterrows():
     nom = prod["nom"]
     sous_cats = prod["sous_categories"]
     try:
-        prix = float(str(prod.get("prix", 0)).replace(",", ".").replace("€", "").strip())
+        prix = float(str(prod.get("Prix", 0)).replace(",", ".").replace("€", "").strip())
     except:
         prix = 0.0
 

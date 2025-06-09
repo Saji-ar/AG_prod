@@ -31,7 +31,7 @@ df["dispo"] = [
 df["sous_cats_str"] = df["sous_categories"].apply(lambda lst: ", ".join(lst))
 
 # Colonnes supplémentaires à afficher si elles existent
-colonnes_supp = ["prix", "description", "Allergène", "permanent"]
+colonnes_supp = ["Prix", "Description", "Allergène", "permanent"]
 for col in colonnes_supp:
     if col not in df.columns:
         df[col] = ""
@@ -39,13 +39,13 @@ df = df.sort_values("nom")
 
 
 # Préparation du DataFrame modifiable
-editable_df = df[["nom", "sous_cats_str", "dispo", "prix", "description", "Allergène", "permanent"]].copy()
+editable_df = df[["nom", "sous_cats_str", "dispo", "Prix", "Description", "Allergène", "permanent"]].copy()
 editable_df.rename(columns={
     "nom": "Nom",
     "sous_cats_str": "Sous-catégories",
     "dispo": "Disponibilité",
-    "prix": "Prix",
-    "description": "Description",
+    "Prix": "Prix",
+    "Description": "Description",
     "Allergène": "Allergène",
     "permanent": "Permanent"
 }, inplace=True)
@@ -85,8 +85,8 @@ if st.button("💾 Enregistrer"):
             "nom": nom,
             "sous_categories": sous_cat,
             "dispo": dispo,
-            "prix": row.get("Prix"),
-            "description": row.get("Description", ""),
+            "Prix": row.get("Prix"),
+            "Description": row.get("Description", ""),
             "Allergène": row.get("Allergène", ""),
             "permanent": bool(row.get("Permanent"))
         }
@@ -100,8 +100,8 @@ if st.button("💾 Enregistrer"):
             if (
                 ancien_row.get("sous_categories") != sous_cat or
                 ancien_row.get("dispo") != dispo or
-                ancien_row.get("prix") != row.get("Prix") or
-                ancien_row.get("description", "") != row.get("Description", "") or
+                ancien_row.get("Prix") != row.get("Prix") or
+                ancien_row.get("Description", "") != row.get("Description", "") or
                 ancien_row.get("Allergène", "") != row.get("Allergène", "") or
                 ancien_row.get("permanent", False) != bool(row.get("Permanent"))
             ):
