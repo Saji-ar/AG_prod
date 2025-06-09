@@ -31,7 +31,7 @@ df["dispo"] = [
 df["sous_cats_str"] = df["sous_categories"].apply(lambda lst: ", ".join(lst))
 
 # Colonnes supplémentaires à afficher si elles existent
-colonnes_supp = ["prix", "description", "allergenes", "permanent"]
+colonnes_supp = ["prix", "description", "Allergène", "permanent"]
 for col in colonnes_supp:
     if col not in df.columns:
         df[col] = ""
@@ -39,14 +39,14 @@ df = df.sort_values("nom")
 
 
 # Préparation du DataFrame modifiable
-editable_df = df[["nom", "sous_cats_str", "dispo", "prix", "description", "allergenes", "permanent"]].copy()
+editable_df = df[["nom", "sous_cats_str", "dispo", "prix", "description", "Allergène", "permanent"]].copy()
 editable_df.rename(columns={
     "nom": "Nom",
     "sous_cats_str": "Sous-catégories",
     "dispo": "Disponibilité",
     "prix": "Prix",
     "description": "Description",
-    "allergenes": "Allergènes",
+    "Allergène": "Allergène",
     "permanent": "Permanent"
 }, inplace=True)
 
@@ -63,7 +63,7 @@ edited_df = st.data_editor(
         "Permanent": st.column_config.CheckboxColumn("Permanent", default=False),
         "Prix": st.column_config.NumberColumn("Prix", step=0.01),
         "Description": st.column_config.TextColumn("Description"),
-        "Allergènes": st.column_config.TextColumn("Allergènes")
+        "Allergène": st.column_config.TextColumn("Allergène")
     }
 )
 
@@ -87,7 +87,7 @@ if st.button("💾 Enregistrer"):
             "dispo": dispo,
             "prix": row.get("Prix"),
             "description": row.get("Description", ""),
-            "allergenes": row.get("Allergènes", ""),
+            "Allergène": row.get("Allergène", ""),
             "permanent": bool(row.get("Permanent"))
         }
 
@@ -102,7 +102,7 @@ if st.button("💾 Enregistrer"):
                 ancien_row.get("dispo") != dispo or
                 ancien_row.get("prix") != row.get("Prix") or
                 ancien_row.get("description", "") != row.get("Description", "") or
-                ancien_row.get("allergenes", "") != row.get("Allergènes", "") or
+                ancien_row.get("Allergène", "") != row.get("Allergène", "") or
                 ancien_row.get("permanent", False) != bool(row.get("Permanent"))
             ):
                 supabase.table("produits").update(produit).eq("nom", nom).execute()
