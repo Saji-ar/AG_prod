@@ -17,11 +17,18 @@ def charger_produits():
 df = charger_produits()
 
 # Nettoyage des listes et fallback par défaut
+# Chaque liste de sous-catégories est convertie en chaîne pour faciliter l'édition
+# Listes par défaut
 df["sous_categories"] = df["sous_categories"].apply(lambda x: x if isinstance(x, list) else [])
+if "dispo" not in df.columns:
+    df["dispo"] = [[] for _ in range(len(df))]
 df["dispo"] = [
     x if isinstance(x, list) else [True] * max(1, len(sous_cat if isinstance(sous_cat, list) else []))
     for x, sous_cat in zip(df["dispo"], df["sous_categories"])
 ]
+
+# Conversion des sous-catégories en texte pour une édition plus simple
+df["sous_cats_str"] = df["sous_categories"].apply(lambda lst: ", ".join(lst))
 
 # Colonnes supplémentaires à afficher si elles existent
 colonnes_supp = ["prix", "description", "allergenes", "permanent"]
@@ -32,10 +39,10 @@ df = df.sort_values("nom")
 
 
 # Préparation du DataFrame modifiable
-editable_df = df[["nom", "sous_categories", "dispo", "prix", "description", "allergenes", "permanent"]].copy()
+editable_df = df[["nom", "sous_cats_str", "dispo", "prix", "description", "allergenes", "permanent"]].copy()
 editable_df.rename(columns={
     "nom": "Nom",
-    "sous_categories": "Sous-catégories",
+    "sous_cats_str": "Sous-catégories",
     "dispo": "Disponibilité",
     "prix": "Prix",
     "description": "Description",
@@ -51,7 +58,7 @@ edited_df = st.data_editor(
     num_rows="dynamic",
     key="produits_editor",
     column_config={
-        "Sous-catégories": st.column_config.ListColumn("Sous-catégories"),
+        "Sous-catégories": st.column_config.TextColumn("Sous-catégories (séparées par des virgules)"),
         "Disponibilité": st.column_config.ListColumn("Disponibilité", help="Liste de booléens"),
         "Permanent": st.column_config.CheckboxColumn("Permanent", default=False),
         "Prix": st.column_config.NumberColumn("Prix", step=0.01),
@@ -67,9 +74,9 @@ if st.button("💾 Enregistrer"):
             continue
 
         # Nettoyage des listes
-        sous_cat = row.get("Sous-catégories", [])
+        sous_cat_str = str(row.get("Sous-catégories", ""))
+        sous_cat = [sc.strip() for sc in sous_cat_str.split(",") if sc.strip()]
         dispo = row.get("Disponibilité", [])
-        sous_cat = sous_cat if isinstance(sous_cat, list) else []
         dispo = dispo if isinstance(dispo, list) else [True] * max(1, len(sous_cat))
         if len(dispo) != len(sous_cat):
             dispo = [True] * len(sous_cat) if sous_cat else [True]

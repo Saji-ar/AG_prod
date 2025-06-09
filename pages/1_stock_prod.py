@@ -21,6 +21,18 @@ def charger_donnees_initiales():
     prod_df = pd.DataFrame(prod)
     stock_df = pd.DataFrame(stock)
 
+    produits_df["sous_categories"] = produits_df["sous_categories"].apply(lambda x: x if isinstance(x, list) else [])
+    stock_df["sous_categorie"] = stock_df["sous_categorie"].fillna("")
+    prod_df["sous_categorie"] = prod_df["sous_categorie"].fillna("")
+
+    # Filtrer les lignes avec des sous-catégories inexistantes
+    sub_map = {row["nom"]: row["sous_categories"] for _, row in produits_df.iterrows()}
+    def valid(prod, sc):
+        valides = sub_map.get(prod, [""])
+        return sc in valides or (sc == "" and "" in valides)
+    stock_df = stock_df[stock_df.apply(lambda r: valid(r["produit"], r["sous_categorie"]), axis=1)]
+    prod_df = prod_df[prod_df.apply(lambda r: valid(r["produit"], r["sous_categorie"]), axis=1)]
+
     for df, col in [(prod_df, "date"), (stock_df, "date")]:
         df[col] = pd.to_datetime(df[col], errors="coerce").dt.date
 
@@ -54,19 +66,18 @@ for _, row in produits_df.iterrows():
         rows.append({
             "Produit": nom_produit,
             "sous_categorie": sc,
-            "Nom": nom,
             "Stock": int(stock_val),
             "Production": int(prod_val)
         })
 
 df_final = pd.DataFrame(rows)
-df_final = df_final.sort_values("Nom")
+df_final = df_final.sort_values(["Produit", "sous_categorie"]).reset_index(drop=True)
 
 
 st.subheader("📝 Modifier les valeurs pour la journée")
 
 if "df_modif" not in st.session_state or st.session_state.get("last_date") != date_cible:
-    st.session_state.df_modif = df_final[["Nom", "Stock", "Production"]].copy()
+    st.session_state.df_modif = df_final[["Produit", "sous_categorie", "Stock", "Production"]].copy()
     st.session_state.last_date = date_cible
 
 
@@ -76,7 +87,11 @@ df_modif = st.data_editor(
     use_container_width=True,
     num_rows="dyamic",
     key="editable",
-    hide_index=True
+    hide_index=True,
+    column_config={
+        "Produit": st.column_config.TextColumn("Produit", disabled=True),
+        "sous_categorie": st.column_config.TextColumn("Sous-catégorie")
+    }
 )
 
 
@@ -85,9 +100,9 @@ if st.button("💾 Enregistrer les modifications"):
     lignes_prod = []
 
     for i, row in df_modif.iterrows():
-        ligne_orig = df_final[df_final["Nom"] == row["Nom"]].iloc[0]
+        ligne_orig = df_final.iloc[i]
         produit = ligne_orig["Produit"]
-        sous_categorie = ligne_orig["sous_categorie"]
+        sous_categorie = row.get("sous_categorie", ligne_orig["sous_categorie"])
         stock_new = int(row["Stock"]) if pd.notna(row["Stock"]) else 0
         prod_new = int(row["Production"]) if pd.notna(row["Production"]) else 0
 
@@ -130,4 +145,4 @@ if st.button("💾 Enregistrer les modifications"):
 
     st.success("✅ Modifications enregistrées dans Supabase.")
     st.cache_data.clear()
-    st.session_state.df_modif = df_final[["Nom", "Stock", "Production"]].copy()
+    st.session_state.df_modif = df_final[["Produit", "sous_categorie", "Stock", "Production"]].copy()
