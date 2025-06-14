@@ -130,6 +130,8 @@ if st.button("💾 Enregistrer"):
             val = inputs.get(key)
             if val is None:
                 continue
+            if float(val) == 0.0:
+                continue
             # Vérification seuils selon type
             if type_chambre == "positif" and (val > 6 or val < 0):
                 st.warning(
@@ -144,9 +146,9 @@ if st.button("💾 Enregistrer"):
             existing = releves_recents.query(
                 "chambre_id == @chambre_id and moment_journee == @moment"
             )
+
             if existing.empty or float(existing.iloc[0]["temperature"]) != float(val):
                 item = {
-                    "chambre_id": chambre_id,
                     "date": str(selected_date),
                     "moment_journee": moment,
                     "temperature": float(val),
