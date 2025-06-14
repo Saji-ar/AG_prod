@@ -41,9 +41,9 @@ def main():
         sous_cat = st.text_input("Sous-catégories (séparées par des virgules)", value=sous_cat_str)
         dispo_str = ", ".join(str(x) for x in produit_data.get("dispo", []))
         dispo = st.text_input("Disponibilité (True/False séparés par des virgules)", value=dispo_str)
-        prix = st.number_input("Prix", value=float(produit_data.get("prix") or 0), step=0.01)
-        description = st.text_area("Description", value=produit_data.get("description", ""))
-        allergenes = st.text_input("Allergènes", value=produit_data.get("allergenes", ""))
+        prix = st.number_input("Prix", value=float(produit_data.get("Prix") or 0), step=0.01)
+        description = st.text_area("Description", value=produit_data.get("Description", ""))
+        allergenes = st.text_input("Allergènes", value=produit_data.get("Allergène", ""))
         permanent = st.checkbox("Permanent", value=bool(produit_data.get("permanent", False)))
         submitted = st.form_submit_button("Enregistrer")
 
@@ -54,9 +54,9 @@ def main():
             "nom": nom,
             "sous_categories": sous_list,
             "dispo": dispo_list,
-            "prix": prix,
-            "description": description,
-            "allergenes": allergenes,
+            "Prix": prix,
+            "Description": description,
+            "Allergène": allergenes,
             "permanent": permanent,
         }
         if choix == "Nouveau produit":
