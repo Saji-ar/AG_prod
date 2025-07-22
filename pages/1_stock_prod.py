@@ -69,18 +69,24 @@ if "df_modif" not in st.session_state or st.session_state.get("last_date") != da
     st.session_state.df_modif = df_final[["Nom", "Stock", "Production"]].copy()
     st.session_state.last_date = date_cible
 
+# Stocke l'état précédent des modifications pour comparer
+if "df_previous" not in st.session_state:
+    st.session_state.df_previous = st.session_state.df_modif.copy()
+
+# Rafraîchissement toutes les secondes
+st.experimental_set_query_params(refresh_interval=1)
 
 # Éditeur de données
 df_modif = st.data_editor(
     st.session_state.df_modif.reset_index(drop=True),
     use_container_width=True,
-    num_rows="dyamic",
+    num_rows="dynamic",
     key="editable",
     hide_index=True
 )
 
-
-if st.button("💾 Enregistrer les modifications"):
+# Comparer les données modifiées et enregistrement automatique des différences
+if not df_modif.equals(st.session_state.df_previous):
     lignes_stock = []
     lignes_prod = []
 
@@ -90,9 +96,6 @@ if st.button("💾 Enregistrer les modifications"):
         sous_categorie = ligne_orig["sous_categorie"]
         stock_new = int(row["Stock"]) if pd.notna(row["Stock"]) else 0
         prod_new = int(row["Production"]) if pd.notna(row["Production"]) else 0
-
-        if stock_new == 0 and prod_new == 0:
-            continue
 
         old_stock = ligne_orig["Stock"]
         old_prod = ligne_orig["Production"]
@@ -118,16 +121,20 @@ if st.button("💾 Enregistrer les modifications"):
         ligne = {
             k: int(v) if isinstance(v, np.integer) else v
             for k, v in ligne.items()
-        }        
+        }
         supabase.table("Stock").insert(ligne).execute()
 
     for ligne in lignes_prod:
         ligne = {
             k: int(v) if isinstance(v, np.integer) else v
             for k, v in ligne.items()
-        }       
+        }
         supabase.table("Prod").insert(ligne).execute()
 
     st.success("✅ Modifications enregistrées dans Supabase.")
-    st.cache_data.clear()
-    st.session_state.df_modif = df_final[["Nom", "Stock", "Production"]].copy()
+
+    # Mise à jour de l'état précédent pour comparaison future
+    st.session_state.df_previous = df_modif.copy()
+
+# Cache les données après chaque mise à jour
+st.cache_data.clear()
