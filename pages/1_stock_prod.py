@@ -74,7 +74,12 @@ if "df_previous" not in st.session_state:
     st.session_state.df_previous = st.session_state.df_modif.copy()
 
 # Rafraîchissement toutes les secondes
-st.experimental_set_query_params(refresh_interval=1)
+if "refresh" not in st.session_state:
+    st.session_state.refresh = 0
+
+st.session_state.refresh += 1
+if st.session_state.refresh % 10 == 0:
+    st.experimental_rerun()
 
 # Éditeur de données
 df_modif = st.data_editor(
