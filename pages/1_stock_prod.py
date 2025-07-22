@@ -13,9 +13,10 @@ st.title("🧾 Suivi journalier : Stock & Production modifiables")
 
 @st.cache_data(show_spinner="Chargement des données...", ttl=10)
 def charger_donnees_initiales():
+    date_semaine_derniere = (datetime.today() - timedelta(days=10)).date()
     produits = supabase.table("produits").select("*").execute().data
-    prod = supabase.table("Prod").select("*").execute().data
-    stock = supabase.table("Stock").select("*").execute().data
+    prod = supabase.table("Prod").select("*").filter("date", "gte", date_semaine_derniere).execute().data
+    stock = supabase.table("Stock").select("*").filter("date", "gte", date_semaine_derniere).execute().data
 
     produits_df = pd.DataFrame(produits)
     prod_df = pd.DataFrame(prod)
@@ -27,7 +28,9 @@ def charger_donnees_initiales():
     return produits_df, prod_df, stock_df
 
 produits_df, prod_df, stock_df = charger_donnees_initiales()
+st.write(stock_df)
 
+print(stock_df)
 date_cible = st.date_input("📅 Choisir une date", value=datetime.today().date())
 date_limite = datetime.today().date() - timedelta(days=7)
 
@@ -73,15 +76,18 @@ if "df_modif" not in st.session_state or st.session_state.get("last_date") != da
 if "df_previous" not in st.session_state:
     st.session_state.df_previous = st.session_state.df_modif.copy()
 
-# Rafraîchissement toutes les secondes
-if "refresh" not in st.session_state:
-    st.session_state.refresh = 0
+# Ajouter du HTML pour forcer le clavier numérique sur les champs d'édition
+st.markdown("""
+    <style>
+        input[type="number"], input[type="text"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-st.session_state.refresh += 1
-if st.session_state.refresh % 10 == 0:
-    st.experimental_rerun()
-
-# Éditeur de données
+# Éditeur de données avec champs numériques
 df_modif = st.data_editor(
     st.session_state.df_modif.reset_index(drop=True),
     use_container_width=True,
