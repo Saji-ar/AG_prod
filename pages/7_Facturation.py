@@ -17,6 +17,59 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Function to validate and clean invoice data
+def validate_and_clean_invoice_data(df):
+    """
+    Valide et nettoie les données de la facture avant génération
+    Retourne le DataFrame nettoyé et une liste d'erreurs
+    """
+    logger.info("ÉTAPE: Début de validation des données de facture")
+    errors = []
+    cleaned_df = df.copy()
+    
+    # 1. Supprimer les lignes vides (où Produit est vide ou None)
+    initial_rows = len(cleaned_df)
+    cleaned_df = cleaned_df[
+        (cleaned_df['Produit'].notna()) & 
+        (cleaned_df['Produit'].str.strip() != '')
+    ].copy()
+    removed_empty_rows = initial_rows - len(cleaned_df)
+    if removed_empty_rows > 0:
+        logger.info(f"ÉTAPE: {removed_empty_rows} ligne(s) vide(s) supprimée(s)")
+    
+    # 2. Vérifier que si prix unitaire est rempli, TVA l'est aussi
+    for index, row in cleaned_df.iterrows():
+        if pd.notna(row['Prix unitaire']) and row['Prix unitaire'] != '':
+            if pd.isna(row['TVA']) or row['TVA'] == '':
+                error_msg = f"Ligne {index + 1}: TVA manquante pour le produit '{row['Produit']}' (prix unitaire: {row['Prix unitaire']})"
+                errors.append(error_msg)
+                logger.error(f"VALIDATION ERROR: {error_msg}")
+    
+    # 3. Vérifier qu'il reste au moins une ligne valide
+    if len(cleaned_df) == 0:
+        error_msg = "Aucune ligne valide dans la facture"
+        errors.append(error_msg)
+        logger.error(f"VALIDATION ERROR: {error_msg}")
+    
+    # 4. Vérifier que toutes les lignes ont un produit, quantité et prix
+    for index, row in cleaned_df.iterrows():
+        if pd.isna(row['Quantité']) or row['Quantité'] <= 0:
+            error_msg = f"Ligne {index + 1}: Quantité invalide pour le produit '{row['Produit']}'"
+            errors.append(error_msg)
+            logger.error(f"VALIDATION ERROR: {error_msg}")
+        
+        if pd.isna(row['Prix unitaire']) or row['Prix unitaire'] <= 0:
+            error_msg = f"Ligne {index + 1}: Prix unitaire invalide pour le produit '{row['Produit']}'"
+            errors.append(error_msg)
+            logger.error(f"VALIDATION ERROR: {error_msg}")
+    
+    if len(errors) == 0:
+        logger.info(f"ÉTAPE: Validation réussie - {len(cleaned_df)} ligne(s) valide(s)")
+    else:
+        logger.error(f"ÉTAPE: Validation échouée - {len(errors)} erreur(s) trouvée(s)")
+    
+    return cleaned_df, errors
+
 # Function to handle changes in the DataFrame
 def df_on_change():
     logger.info("ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame")
@@ -162,24 +215,52 @@ if st.button("Générer la facture") :
     logger.info(f"ÉTAPE: Date prestation: {data_presta}")
     logger.info(f"ÉTAPE: Nombre de lignes dans la facture: {len(st.session_state['df'])}")
     
-    pdf_filename, insert = invoice_maker(r"template_facture_ASD11.xlsx","data/test.xlsx",st.session_state["df"],clients.loc[clients["nom"] == client].iloc[0],data_presta,
-                                         total_ttc, total_ht)
-    logger.info(f"ÉTAPE: Facture générée - Nom du fichier: {pdf_filename}")
-    logger.info(f"ÉTAPE: Données insertées: {insert}")
-    st.write(insert)
-    st.success("Facture générée")
+    # Validation et nettoyage des données
+    cleaned_df, validation_errors = validate_and_clean_invoice_data(st.session_state["df"])
     
-    logger.info("ÉTAPE: Lecture du fichier PDF généré")
-    with open('data/temp.pdf', 'rb') as pdf_file:
-        pdf_data = pdf_file.read()
-    logger.info(f"ÉTAPE: PDF lu, taille: {len(pdf_data)} bytes")
-    
-    st.write(pdf_filename)
-    st.download_button(
-        label="Télécharger PDF",
-        data=pdf_data,
-        file_name=pdf_filename,
-        mime="application/pdf"
-        )
-    logger.info("ÉTAPE: Bouton de téléchargement affiché")
+    if validation_errors:
+        # Afficher les erreurs de validation
+        st.error("⚠️ Erreurs de validation détectées :")
+        for error in validation_errors:
+            st.error(f"• {error}")
+        logger.error("ÉTAPE: Génération de facture annulée à cause d'erreurs de validation")
+    else:
+        # Validation réussie, procéder à la génération
+        logger.info("ÉTAPE: Validation réussie, génération de la facture en cours")
+        
+        # Recalculer les totaux avec les données nettoyées
+        cleaned_total_ht = pd.to_numeric(cleaned_df["Prix total HT"], errors='coerce').sum()
+        cleaned_mont_ttc = cleaned_df["Prix total HT"] * (cleaned_df["TVA"] / 100 + 1)
+        cleaned_total_ttc = cleaned_mont_ttc.sum()
+        
+        logger.info(f"ÉTAPE: Totaux recalculés - HT: {cleaned_total_ht:.2f} €, TTC: {cleaned_total_ttc:.2f} €")
+        
+        # Mettre à jour la session avec les données nettoyées
+        st.session_state["df"] = cleaned_df
+        
+        pdf_filename, insert = invoice_maker(r"template_facture_ASD11.xlsx","data/test.xlsx",cleaned_df,clients.loc[clients["nom"] == client].iloc[0],data_presta,
+                                             cleaned_total_ttc, cleaned_total_ht)
+        logger.info(f"ÉTAPE: Facture générée - Nom du fichier: {pdf_filename}")
+        logger.info(f"ÉTAPE: Données insertées: {insert}")
+        st.write(insert)
+        st.success("✅ Facture générée avec succès")
+        
+        logger.info("ÉTAPE: Lecture du fichier PDF généré")
+        with open('data/temp.pdf', 'rb') as pdf_file:
+            pdf_data = pdf_file.read()
+        logger.info(f"ÉTAPE: PDF lu, taille: {len(pdf_data)} bytes")
+        
+        st.write(pdf_filename)
+        st.download_button(
+            label="Télécharger PDF",
+            data=pdf_data,
+            file_name=pdf_filename,
+            mime="application/pdf"
+            )
+        logger.info("ÉTAPE: Bouton de téléchargement affiché")
+        
+        # Afficher un résumé de ce qui a été nettoyé
+        if len(cleaned_df) < len(st.session_state["df"]):
+            removed_count = len(st.session_state["df"]) - len(cleaned_df)
+            st.info(f"ℹ️ {removed_count} ligne(s) vide(s) ont été automatiquement supprimée(s)")
 
