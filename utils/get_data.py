@@ -78,16 +78,29 @@ def get_next_facture_number():
     # Récupérer tous les num_facture et filtrer par année
     response = supabase.table('factures').select('num_facture').execute()
     
-    if not response.data:
-        return f"{current_year}001"
+    # if not response.data:
+    #     return f"{current_year}001"
     
     # Filtrer les factures de l'année courante
-    current_year_factures = [
-        int(str(f['num_facture'])[-3:]) 
-        for f in response.data 
-        if str(f['num_facture']).startswith(str(current_year))
-    ]
+    current_year_factures = []
+    has_current_year_factures = False
     
+    for f in response.data:
+        facture_num_str = str(f['num_facture'])
+        if facture_num_str.startswith(str(current_year)):
+            has_current_year_factures = True
+            # Extraire les 3 derniers chiffres
+            try:
+                number = int(facture_num_str[-3:])
+                current_year_factures.append(number)
+            except ValueError:
+                continue
+    
+    # Si c'est la première facture de l'année
+    if not has_current_year_factures:
+        return f"{current_year}001"
+    
+    # Sinon, prendre le numéro suivant
     if not current_year_factures:
         return f"{current_year}001"
     
@@ -200,4 +213,92 @@ def delete_facture_and_lines(num_facture):
         return {
             "success": False,
             "error": error_msg
+        }
+
+def save_product_changes_from_session(product_session_state, current_product_df):
+    """
+    Sauvegarde les modifications des produits en utilisant les données de session Streamlit
+    
+    Args:
+        product_session_state: État de session du data_editor des produits
+        current_product_df: DataFrame actuel des produits
+    
+    Returns:
+        dict: {"success": bool, "changes": dict, "error": str}
+    """
+    try:
+        changes = {
+            "inserted": 0,
+            "updated": 0,
+            "deleted": 0,
+            "details": []
+        }
+        
+        # Debug: afficher les informations de session
+        print(f"DEBUG: edited_rows: {product_session_state.get('edited_rows', {})}")
+        print(f"DEBUG: added_rows: {product_session_state.get('added_rows', [])}")
+        print(f"DEBUG: deleted_rows: {product_session_state.get('deleted_rows', [])}")
+        print(f"DEBUG: DataFrame shape: {current_product_df.shape}")
+        
+        # Traiter les lignes modifiées
+        for index, updates in product_session_state.get("edited_rows", {}).items():
+            product_id = current_product_df.iloc[index]['id']
+            update_data = {}
+            
+            for key, value in updates.items():
+                if key == 'nom':
+                    update_data['nom'] = value
+                elif key == 'prix':
+                    update_data['prix'] = float(value) if value else 0.0
+                elif key == 'tva':
+                    update_data['tva'] = float(value) if value else 0.0
+            
+            if update_data:
+                result = supabase.table('ref_facture').update(update_data).eq('id', product_id).execute()
+                changes["updated"] += 1
+                changes["details"].append(f"Modifié produit ID {product_id}: {list(update_data.keys())}")
+        
+        # Traiter les nouvelles lignes ajoutées
+        for new_row in product_session_state.get("added_rows", []):
+            if new_row.get('nom') and new_row['nom'].strip():
+                result = supabase.table('ref_facture').insert({
+                    'nom': new_row['nom'],
+                    'prix': float(new_row.get('prix', 0)) if new_row.get('prix') else 0.0,
+                    'tva': float(new_row.get('tva', 0)) if new_row.get('tva') else 0.0
+                }).execute()
+                changes["inserted"] += 1
+                changes["details"].append(f"Ajouté: {new_row['nom']}")
+        
+        # Traiter les lignes supprimées
+        for deleted_index in product_session_state.get("deleted_rows", []):
+            try:
+                # Vérifier que l'index existe et que l'ID est valide
+                if deleted_index < len(current_product_df):
+                    row = current_product_df.iloc[deleted_index]
+                    product_id = row.get('id')
+                    product_name = row.get('nom', 'Produit inconnu')
+                    
+                    # Vérifier que l'ID existe et n'est pas vide
+                    if product_id and pd.notna(product_id) and str(product_id).strip():
+                        result = supabase.table('ref_facture').delete().eq('id', product_id).execute()
+                        changes["deleted"] += 1
+                        changes["details"].append(f"Supprimé: {product_name} (ID: {product_id})")
+                    else:
+                        changes["details"].append(f"Ligne {deleted_index}: Pas d'ID valide pour la suppression")
+                else:
+                    changes["details"].append(f"Index {deleted_index}: Hors limites du DataFrame")
+            except Exception as e:
+                changes["details"].append(f"Erreur suppression ligne {deleted_index}: {str(e)}")
+        
+        return {
+            "success": True,
+            "changes": changes,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "changes": None,
+            "error": str(e)
         }

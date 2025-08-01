@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
-import json
 import logging
 from utils.get_data import get_ref_products
 from utils.get_data import get_clients
+from utils.get_data import save_product_changes_from_session
 from utils.invoice_maker import invoice_maker
 
 # Configuration du logging
@@ -53,13 +53,27 @@ def validate_and_clean_invoice_data(df):
     
     # 4. Vérifier que toutes les lignes ont un produit, quantité et prix
     for index, row in cleaned_df.iterrows():
-        if pd.isna(row['Quantité']) or row['Quantité'] <= 0:
-            error_msg = f"Ligne {index + 1}: Quantité invalide pour le produit '{row['Produit']}'"
+        # Validation quantité
+        try:
+            quantite = float(row['Quantité']) if pd.notna(row['Quantité']) else 0
+            if quantite <= 0:
+                error_msg = f"Ligne {index + 1}: Quantité invalide pour le produit '{row['Produit']}'"
+                errors.append(error_msg)
+                logger.error(f"VALIDATION ERROR: {error_msg}")
+        except (ValueError, TypeError):
+            error_msg = f"Ligne {index + 1}: Quantité non numérique pour le produit '{row['Produit']}'"
             errors.append(error_msg)
             logger.error(f"VALIDATION ERROR: {error_msg}")
         
-        if pd.isna(row['Prix unitaire']) or row['Prix unitaire'] <= 0:
-            error_msg = f"Ligne {index + 1}: Prix unitaire invalide pour le produit '{row['Produit']}'"
+        # Validation prix unitaire
+        try:
+            prix = float(row['Prix unitaire']) if pd.notna(row['Prix unitaire']) else 0
+            if prix <= 0:
+                error_msg = f"Ligne {index + 1}: Prix unitaire invalide pour le produit '{row['Produit']}'"
+                errors.append(error_msg)
+                logger.error(f"VALIDATION ERROR: {error_msg}")
+        except (ValueError, TypeError):
+            error_msg = f"Ligne {index + 1}: Prix unitaire non numérique pour le produit '{row['Produit']}'"
             errors.append(error_msg)
             logger.error(f"VALIDATION ERROR: {error_msg}")
     
@@ -145,12 +159,16 @@ st.set_page_config(layout="wide", page_title="Facturation AG-Grid")
 
 logger.info("ÉTAPE: Démarrage de l'application Facturation")
 logger.info("ÉTAPE: Récupération des produits de référence")
-product = get_ref_products()
-logger.info(f"ÉTAPE: {len(product)} produits chargés")
+original_products = get_ref_products()
+logger.info(f"ÉTAPE: {len(original_products)} produits chargés")
+
+# Stocker les produits originaux pour comparaison
+if "original_products" not in st.session_state:
+    st.session_state["original_products"] = original_products.copy()
 
 st.header("Produits")
 logger.info("ÉTAPE: Affichage de l'éditeur de produits")
-product = st.data_editor(product, key="product", num_rows="dynamic", hide_index=True,column_order=["nom","prix","tva"])
+product = st.data_editor(original_products, key="product", num_rows="dynamic", hide_index=True,column_order=["nom","prix","tva"])
 
 
 
@@ -227,6 +245,30 @@ if st.button("Générer la facture") :
     else:
         # Validation réussie, procéder à la génération
         logger.info("ÉTAPE: Validation réussie, génération de la facture en cours")
+        
+        # Sauvegarder les modifications des produits avant la génération
+        logger.info("ÉTAPE: Sauvegarde des modifications de produits")
+        if "product" in st.session_state:
+            product_save_result = save_product_changes_from_session(
+                st.session_state["product"], 
+                st.session_state["original_products"]
+            )
+            
+            if product_save_result["success"]:
+                changes = product_save_result["changes"]
+                logger.info(f"ÉTAPE: Produits sauvegardés - {changes['inserted']} ajoutés, {changes['updated']} modifiés, {changes['deleted']} supprimés")
+                
+                if any([changes['inserted'], changes['updated'], changes['deleted']]):
+                    st.info(f"📦 Produits mis à jour: {changes['inserted']} ajoutés, {changes['updated']} modifiés, {changes['deleted']} supprimés")
+                    for detail in changes['details']:
+                        logger.info(f"DÉTAIL: {detail}")
+                    
+                    # Recharger les produits depuis la base après sauvegarde
+                    st.session_state["original_products"] = get_ref_products()
+                    logger.info("ÉTAPE: Produits originaux mis à jour depuis la base")
+            else:
+                logger.error(f"ÉTAPE: Erreur lors de la sauvegarde des produits: {product_save_result['error']}")
+                st.warning(f"⚠️ Erreur lors de la sauvegarde des produits: {product_save_result['error']}")
         
         # Recalculer les totaux avec les données nettoyées
         cleaned_total_ht = pd.to_numeric(cleaned_df["Prix total HT"], errors='coerce').sum()
