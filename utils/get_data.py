@@ -545,3 +545,205 @@ def check_facture_exists_in_storage(num_facture):
     except Exception as e:
         print(f"Erreur lors de la vérification d'existence: {e}")
         return False
+
+def add_client(nom, adresse_1=None, adresse_2=None, telephone=None):
+    """
+    Ajoute un nouveau client dans la base de données
+    
+    Args:
+        nom: Nom du client (obligatoire)
+        adresse_1: Première ligne d'adresse (optionnel)
+        adresse_2: Deuxième ligne d'adresse (optionnel)
+        telephone: Numéro de téléphone (optionnel)
+    
+    Returns:
+        dict: {"success": bool, "data": dict, "error": str}
+    """
+    try:
+        # Vérifier que le nom n'est pas vide
+        if not nom or not nom.strip():
+            return {
+                "success": False,
+                "data": None,
+                "error": "Le nom du client est obligatoire"
+            }
+        
+        # Préparer les données (sans ID car auto-généré)
+        client_data = {
+            'nom': nom.strip(),
+            'adresse_1': adresse_1.strip() if adresse_1 else None,
+            'adresse_2': adresse_2.strip() if adresse_2 else None,
+            'telephone': telephone.strip() if telephone else None
+        }
+        
+        # Nettoyer les valeurs None/vides
+        client_data = {k: v for k, v in client_data.items() if v is not None and v != ""}
+        
+        # Insérer le nouveau client
+        result = supabase.table('clients').insert(client_data).execute()
+        
+        return {
+            "success": True,
+            "data": result.data[0] if result.data else None,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "data": None,
+            "error": str(e)
+        }
+
+def update_client(client_id, nom=None, adresse_1=None, adresse_2=None, telephone=None):
+    """
+    Met à jour les informations d'un client
+    
+    Args:
+        client_id: ID du client à modifier
+        nom: Nouveau nom du client (optionnel)
+        adresse_1: Nouvelle première ligne d'adresse (optionnel)
+        adresse_2: Nouvelle deuxième ligne d'adresse (optionnel)
+        telephone: Nouveau numéro de téléphone (optionnel)
+    
+    Returns:
+        dict: {"success": bool, "data": dict, "error": str}
+    """
+    try:
+        # Préparer les données à mettre à jour
+        update_data = {}
+        
+        if nom is not None:
+            if not nom.strip():
+                return {
+                    "success": False,
+                    "data": None,
+                    "error": "Le nom du client ne peut pas être vide"
+                }
+            update_data['nom'] = nom.strip()
+        
+        if adresse_1 is not None:
+            update_data['adresse_1'] = adresse_1.strip() if adresse_1.strip() else None
+        
+        if adresse_2 is not None:
+            update_data['adresse_2'] = adresse_2.strip() if adresse_2.strip() else None
+        
+        if telephone is not None:
+            update_data['telephone'] = telephone.strip() if telephone.strip() else None
+        
+        # Vérifier qu'il y a au moins une donnée à mettre à jour
+        if not update_data:
+            return {
+                "success": False,
+                "data": None,
+                "error": "Aucune donnée à mettre à jour"
+            }
+        
+        # Mettre à jour le client
+        result = supabase.table('clients').update(update_data).eq('id', client_id).execute()
+        
+        return {
+            "success": True,
+            "data": result.data[0] if result.data else None,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "data": None,
+            "error": str(e)
+        }
+
+def delete_client(client_id):
+    """
+    Supprime un client de la base de données
+    ATTENTION: Vérifier avant qu'il n'a pas de factures associées
+    
+    Args:
+        client_id: ID du client à supprimer
+    
+    Returns:
+        dict: {"success": bool, "error": str}
+    """
+    try:
+        # Vérifier s'il y a des factures associées
+        factures_response = supabase.table('factures').select('num_facture').eq('client', client_id).execute()
+        
+        if factures_response.data:
+            return {
+                "success": False,
+                "error": f"Impossible de supprimer: {len(factures_response.data)} facture(s) associée(s) à ce client"
+            }
+        
+        # Supprimer le client
+        result = supabase.table('clients').delete().eq('id', client_id).execute()
+        
+        return {
+            "success": True,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+def get_client_details(client_id):
+    """
+    Récupère les détails complets d'un client
+    
+    Args:
+        client_id: ID du client
+    
+    Returns:
+        dict: {"success": bool, "data": dict, "error": str}
+    """
+    try:
+        result = supabase.table('clients').select('*').eq('id', client_id).execute()
+        
+        if result.data:
+            return {
+                "success": True,
+                "data": result.data[0],
+                "error": None
+            }
+        else:
+            return {
+                "success": False,
+                "data": None,
+                "error": "Client non trouvé"
+            }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "data": None,
+            "error": str(e)
+        }
+
+def search_clients(search_term=None):
+    """
+    Recherche des clients par nom
+    
+    Args:
+        search_term: Terme de recherche (optionnel)
+    
+    Returns:
+        pd.DataFrame: DataFrame des clients trouvés
+    """
+    try:
+        if search_term:
+            # Recherche avec filtre sur le nom
+            response = supabase.table('clients').select('*').ilike('nom', f'%{search_term}%').order('nom').execute()
+        else:
+            # Récupérer tous les clients
+            response = supabase.table('clients').select('*').order('nom').execute()
+        
+        data = response.data or []
+        return pd.DataFrame(data)
+        
+    except Exception as e:
+        print(f"Erreur lors de la recherche de clients: {e}")
+        return pd.DataFrame()
