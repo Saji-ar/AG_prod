@@ -11,6 +11,7 @@ st.title("🏪 Bienvenue sur le tableau de bord de gestion")
 st.markdown("## 📋 Navigation")
 st.markdown("Utilisez le menu à gauche pour naviguer entre les pages :")
 
+
 # Pages publiques
 st.markdown("### 📂 Pages libres d'accès")
 st.markdown("- **🧾 Stock & Production** : suivre et ajuster la production quotidienne")
