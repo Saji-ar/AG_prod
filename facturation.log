@@ -1,0 +1,1328 @@
+2025-08-01 22:30:08,654 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:08,654 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:08,907 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:08,917 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:08,919 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:08,924 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:08,926 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:08,977 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:08,979 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:08,980 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:08,980 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 22:30:08,982 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:08,983 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:30:08,984 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:30:11,642 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:30:11,643 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:30:11,644 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:30:11,646 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:30:11,649 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:11,649 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:11,691 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:11,693 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:11,693 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:11,694 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:11,695 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:11,727 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:11,728 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:11,729 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:11,731 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:11,731 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:30:11,732 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:30:14,004 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:30:14,005 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:30:14,005 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': "Jus d'orange"}
+2025-08-01 22:30:14,006 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Jus d'orange pour ligne 0
+2025-08-01 22:30:14,009 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Jus d'orange': 4.95
+2025-08-01 22:30:14,010 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Jus d'orange': 10.0%
+2025-08-01 22:30:14,011 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 4.95 = 4.95
+2025-08-01 22:30:14,013 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:30:14,016 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:14,017 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:14,068 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:14,070 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:14,070 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:14,072 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:14,072 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:14,107 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:14,108 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:14,110 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:14,111 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:14,113 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.95 €
+2025-08-01 22:30:14,113 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:30:15,602 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:15,602 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:15,658 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:15,662 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:15,663 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:15,665 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:15,666 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:15,724 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:15,725 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:15,728 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:15,732 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:15,733 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.95 €
+2025-08-01 22:30:15,734 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:30:15,735 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:30:15,735 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:30:15,735 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:30:15,735 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 22:30:15,735 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:30:15,736 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 22:30:15,736 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:30:15,737 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 4.95 €, TTC: 5.45 €
+2025-08-01 22:30:15,783 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:30:16,019 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025017.xlsx "HTTP/2 200 OK"
+2025-08-01 22:30:17,851 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025017.pdf "HTTP/2 200 OK"
+2025-08-01 22:30:17,912 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:30:17,953 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:30:17,954 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025017.pdf
+2025-08-01 22:30:17,954 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:30:17,955 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:30:17,956 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 96141 bytes
+2025-08-01 22:30:17,957 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:30:21,139 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:30:21,139 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:30:21,140 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:30:21,142 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:30:21,143 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:21,143 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:21,186 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:21,187 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:21,187 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:21,188 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:21,189 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:21,230 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:21,231 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:21,232 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:21,233 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:21,234 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.95 €
+2025-08-01 22:30:21,234 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:30:25,283 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:30:25,283 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:30:25,284 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 1 - Modifications: {'Prix unitaire': 3}
+2025-08-01 22:30:25,284 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 3 pour ligne 1
+2025-08-01 22:30:25,284 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 1: 1 × 3.0 = 3.0
+2025-08-01 22:30:25,285 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:30:25,286 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:25,286 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:25,345 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:25,349 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:25,350 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:25,352 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:25,353 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:25,405 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:25,406 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:25,408 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:25,410 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:25,412 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.95 €
+2025-08-01 22:30:25,412 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:30:26,232 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:30:26,232 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:30:26,274 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:30:26,277 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:30:26,277 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:30:26,279 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:30:26,279 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:30:26,309 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:30:26,310 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:30:26,312 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:30:26,313 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:30:26,315 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.95 €
+2025-08-01 22:30:26,315 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:30:26,315 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 2
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: 1 ligne(s) vide(s) supprimée(s)
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 22:30:26,316 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:30:26,317 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 4.95 €, TTC: 5.45 €
+2025-08-01 22:30:26,373 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:30:26,632 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025018.xlsx "HTTP/2 200 OK"
+2025-08-01 22:30:28,642 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025018.pdf "HTTP/2 200 OK"
+2025-08-01 22:30:28,678 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:30:28,725 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:30:28,727 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025018.pdf
+2025-08-01 22:30:28,727 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:30:28,729 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:30:28,729 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 95142 bytes
+2025-08-01 22:30:28,731 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:31:46,943 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:31:46,944 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:31:46,944 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 1 - Modifications: {'Produit': 'Test'}
+2025-08-01 22:31:46,944 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Test pour ligne 1
+2025-08-01 22:31:46,946 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Test': 2.0
+2025-08-01 22:31:46,947 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Test': 24.0%
+2025-08-01 22:31:53,501 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:31:53,501 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:31:53,746 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:31:53,750 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:31:53,751 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:31:53,754 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:31:53,756 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:31:53,803 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:31:53,806 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:31:53,808 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:31:53,808 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 22:31:53,810 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:31:53,812 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:31:53,812 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:31:56,264 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:31:56,264 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:31:56,264 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:31:56,269 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:31:56,272 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:31:56,272 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:31:56,307 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:31:56,308 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:31:56,308 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:31:56,309 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:31:56,310 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:31:56,352 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:31:56,353 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:31:56,354 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:31:56,355 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:31:56,355 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:31:56,356 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:31:58,877 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:31:58,878 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:31:58,878 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': 'vggvf'}
+2025-08-01 22:31:58,878 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = vggvf pour ligne 0
+2025-08-01 22:31:58,881 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'vggvf': 1.0
+2025-08-01 22:31:58,882 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'vggvf': 1.0%
+2025-08-01 22:31:58,883 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 1.0 = 1.0
+2025-08-01 22:31:58,884 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:31:58,888 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:31:58,888 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:31:58,926 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:31:58,929 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:31:58,930 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:31:58,931 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:31:58,932 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:31:58,959 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:31:58,960 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:31:58,963 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:31:58,965 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:31:58,966 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 1.00 €
+2025-08-01 22:31:58,966 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 1.01 €
+2025-08-01 22:32:09,495 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:09,496 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:09,496 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:32:09,498 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:09,500 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:09,500 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:09,565 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:09,566 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:09,566 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:09,567 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:09,567 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:09,605 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:09,608 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:09,610 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:09,612 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:09,614 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 1.00 €
+2025-08-01 22:32:09,614 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 1.01 €
+2025-08-01 22:32:12,750 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:12,750 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:12,750 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': 2}
+2025-08-01 22:32:12,751 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 2 pour ligne 0
+2025-08-01 22:32:12,753 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 2.0 = 2.0
+2025-08-01 22:32:12,753 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:32:12,755 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:12,757 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:12,757 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:12,798 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:12,800 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:12,800 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:12,801 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:12,801 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:12,830 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:12,831 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:12,832 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:12,834 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:12,835 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 2.00 €
+2025-08-01 22:32:12,835 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 2.02 €
+2025-08-01 22:32:17,633 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:17,633 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:17,633 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': None}
+2025-08-01 22:32:17,634 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = None pour ligne 0
+2025-08-01 22:32:17,639 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:17,644 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:17,644 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:17,686 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:17,689 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:17,690 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:17,691 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:17,692 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:17,720 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:17,721 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:17,723 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:17,725 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:17,727 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 2.00 €
+2025-08-01 22:32:17,728 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 2.02 €
+2025-08-01 22:32:18,891 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:18,891 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:18,891 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 1 - Modifications: {'Prix unitaire': '2'}
+2025-08-01 22:32:18,892 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 2 pour ligne 1
+2025-08-01 22:32:18,905 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 1: 1 × 2.0 = 2.0
+2025-08-01 22:32:18,906 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:18,908 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:18,909 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:18,954 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:18,957 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:18,958 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:18,959 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:18,960 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:18,991 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:18,992 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:18,995 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:18,998 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:18,999 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.00 €
+2025-08-01 22:32:18,999 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 2.02 €
+2025-08-01 22:32:21,293 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:21,294 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:21,295 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 2 - Modifications: {'Prix unitaire': '2'}
+2025-08-01 22:32:21,295 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 2 pour ligne 2
+2025-08-01 22:32:21,300 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 2: 1 × 2.0 = 2.0
+2025-08-01 22:32:21,304 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:21,308 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:21,308 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:21,346 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:21,349 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:21,350 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:21,351 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:21,352 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:21,382 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:21,384 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:21,387 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:21,389 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:21,390 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 6.00 €
+2025-08-01 22:32:21,391 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 2.02 €
+2025-08-01 22:32:27,490 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:27,490 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:27,490 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 1 - Modifications: {'Produit': 'divers'}
+2025-08-01 22:32:27,491 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = divers pour ligne 1
+2025-08-01 22:32:27,493 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'divers': 2.0
+2025-08-01 22:32:27,494 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'divers': 2.0%
+2025-08-01 22:32:27,494 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 1: 1 × 2.0 = 2.0
+2025-08-01 22:32:27,495 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:27,498 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:27,498 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:27,574 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:27,577 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:27,577 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:27,579 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:27,580 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:27,621 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:27,623 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:27,624 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:27,627 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:27,633 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 6.00 €
+2025-08-01 22:32:27,633 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 4.06 €
+2025-08-01 22:32:29,958 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:29,959 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:29,959 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 2 - Modifications: {'Produit': 'ytfvjh'}
+2025-08-01 22:32:29,959 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = ytfvjh pour ligne 2
+2025-08-01 22:32:29,963 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'ytfvjh': 2.0
+2025-08-01 22:32:29,965 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'ytfvjh': 0.0%
+2025-08-01 22:32:29,966 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 2: 1 × 2.0 = 2.0
+2025-08-01 22:32:29,967 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:29,972 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:29,973 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:30,020 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:30,023 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:30,024 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:30,025 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:30,026 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:30,064 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:30,065 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:30,066 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:30,068 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:30,069 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 6.00 €
+2025-08-01 22:32:30,069 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 6.06 €
+2025-08-01 22:32:31,410 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:31,411 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:31,443 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:31,446 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:31,446 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:31,448 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:31,449 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:31,492 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:31,493 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:31,494 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:31,496 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:31,497 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 6.00 €
+2025-08-01 22:32:31,497 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 6.06 €
+2025-08-01 22:32:31,498 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:32:31,498 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:32:31,498 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:32:31,498 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 3
+2025-08-01 22:32:31,498 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:32:31,499 - [FACTURATION] - ERROR - VALIDATION ERROR: Ligne 1: Prix unitaire invalide pour le produit 'vggvf'
+2025-08-01 22:32:31,499 - [FACTURATION] - ERROR - ÉTAPE: Validation échouée - 1 erreur(s) trouvée(s)
+2025-08-01 22:32:31,500 - [FACTURATION] - ERROR - ÉTAPE: Génération de facture annulée à cause d'erreurs de validation
+2025-08-01 22:32:41,896 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:32:41,898 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:32:41,904 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': 3}
+2025-08-01 22:32:41,905 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 3 pour ligne 0
+2025-08-01 22:32:41,906 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 3.0 = 3.0
+2025-08-01 22:32:41,907 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:32:41,912 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:41,913 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:41,979 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:41,981 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:41,981 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:41,983 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:41,984 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:42,018 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:42,021 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:42,022 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:42,024 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:42,025 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:32:42,025 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:32:44,204 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:32:44,204 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:32:44,252 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:32:44,256 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:32:44,257 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:32:44,260 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:32:44,261 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:32:44,306 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:32:44,308 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:32:44,312 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:32:44,315 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:32:44,316 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:32:44,317 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:32:44,318 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:32:44,318 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:32:44,318 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:32:44,318 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 3
+2025-08-01 22:32:44,318 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:32:44,320 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 3 ligne(s) valide(s)
+2025-08-01 22:32:44,320 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:32:44,322 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 7.00 €, TTC: 7.07 €
+2025-08-01 22:32:44,371 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:32:44,571 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025019.xlsx "HTTP/2 200 OK"
+2025-08-01 22:32:48,454 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025019.pdf "HTTP/2 200 OK"
+2025-08-01 22:32:48,501 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:32:48,545 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:32:48,584 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:32:48,623 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:32:48,624 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025019.pdf
+2025-08-01 22:32:48,625 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:32:48,626 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:32:48,627 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 78395 bytes
+2025-08-01 22:32:48,628 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:33:01,678 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:33:01,680 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:33:01,759 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:33:01,763 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:33:01,764 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:33:01,766 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:33:01,767 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:33:01,819 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:33:01,821 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:33:01,824 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:33:01,826 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:33:01,828 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:33:01,829 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:27,685 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:39:27,686 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:39:27,693 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:39:27,702 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:39:27,754 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:27,755 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:28,023 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:28,031 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:39:28,033 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:28,037 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:28,038 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:28,068 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:28,070 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:28,072 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:28,075 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:28,077 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:28,078 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:37,334 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:37,334 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:37,427 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:37,429 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:39:37,429 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:37,430 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:37,431 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:37,473 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:37,475 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:37,476 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:37,477 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:37,478 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:37,478 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:40,749 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:40,749 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:40,799 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:40,802 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:39:40,803 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:40,805 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:40,805 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:40,847 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:40,848 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:40,849 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:40,851 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:40,852 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:40,853 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:43,286 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:43,286 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:43,339 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:43,342 - [FACTURATION] - INFO - ÉTAPE: 5 produits chargés
+2025-08-01 22:39:43,342 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:43,345 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:43,345 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:43,381 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:43,381 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:43,383 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:43,385 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:43,386 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:43,387 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:43,388 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:39:43,388 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:39:43,388 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:39:43,388 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 4
+2025-08-01 22:39:43,388 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:39:43,389 - [FACTURATION] - INFO - ÉTAPE: 1 ligne(s) vide(s) supprimée(s)
+2025-08-01 22:39:43,389 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 3 ligne(s) valide(s)
+2025-08-01 22:39:43,389 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:39:43,389 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 22:39:43,436 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture "HTTP/2 201 Created"
+2025-08-01 22:39:43,438 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 1 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 22:39:43,438 - [FACTURATION] - INFO - DÉTAIL: Ajouté: test
+2025-08-01 22:39:43,439 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 7.00 €, TTC: 7.07 €
+2025-08-01 22:39:43,478 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:39:43,707 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025020.xlsx "HTTP/2 200 OK"
+2025-08-01 22:39:47,886 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025020.pdf "HTTP/2 200 OK"
+2025-08-01 22:39:47,931 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:39:47,964 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:47,997 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:48,033 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:48,034 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025020.pdf
+2025-08-01 22:39:48,034 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:39:48,035 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:39:48,035 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 78396 bytes
+2025-08-01 22:39:48,036 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:39:55,353 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:55,354 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:55,427 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:55,429 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:39:55,429 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:55,431 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:55,432 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:55,479 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:55,480 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:55,482 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:55,484 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:55,485 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:55,485 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:57,066 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:39:57,066 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:39:57,099 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:39:57,103 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:39:57,103 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:39:57,105 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:39:57,106 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:39:57,148 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:39:57,149 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:39:57,152 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:39:57,154 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:39:57,155 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:39:57,155 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:39:57,156 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:39:57,156 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:39:57,156 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:39:57,156 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 3
+2025-08-01 22:39:57,156 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:39:57,157 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 3 ligne(s) valide(s)
+2025-08-01 22:39:57,157 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:39:57,157 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 22:39:57,157 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 22:39:57,157 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 7.00 €, TTC: 7.07 €
+2025-08-01 22:39:57,202 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:39:57,405 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025021.xlsx "HTTP/2 200 OK"
+2025-08-01 22:39:59,127 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025021.pdf "HTTP/2 200 OK"
+2025-08-01 22:39:59,202 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:39:59,240 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:59,287 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:59,335 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:39:59,336 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025021.pdf
+2025-08-01 22:39:59,336 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:39:59,338 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:39:59,339 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 78396 bytes
+2025-08-01 22:39:59,340 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:40:07,815 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:40:07,816 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:40:07,875 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:40:07,878 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:40:07,878 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:40:07,880 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:40:07,881 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:40:07,918 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:40:07,920 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:40:07,922 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:40:07,924 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:40:07,925 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:40:07,925 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:40:11,985 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:40:11,986 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:40:12,036 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:40:12,039 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:40:12,040 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:40:12,042 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:40:12,043 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:40:12,070 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:40:12,071 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:40:12,073 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:40:12,074 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:40:12,076 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 7.00 €
+2025-08-01 22:40:12,076 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 7.07 €
+2025-08-01 22:40:12,077 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:40:12,077 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:40:12,077 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:40:12,078 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 3
+2025-08-01 22:40:12,078 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:40:12,078 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 3 ligne(s) valide(s)
+2025-08-01 22:40:12,078 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:40:12,079 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 22:40:12,079 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 22:40:12,079 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 7.00 €, TTC: 7.07 €
+2025-08-01 22:40:12,105 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:40:12,278 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025022.xlsx "HTTP/2 200 OK"
+2025-08-01 22:40:14,130 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025022.pdf "HTTP/2 200 OK"
+2025-08-01 22:40:14,167 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:40:14,198 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:40:14,236 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:40:14,271 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:40:14,272 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025022.pdf
+2025-08-01 22:40:14,272 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:40:14,273 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:40:14,273 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 78396 bytes
+2025-08-01 22:40:14,274 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:42:41,361 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:41,361 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:41,605 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:41,610 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:42:41,612 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:41,616 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:41,618 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:41,653 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:41,657 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:41,658 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:41,659 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 22:42:41,660 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:41,661 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:42:41,661 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:42:46,343 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:46,344 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:46,383 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:46,387 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:42:46,388 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:46,391 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:46,392 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:46,423 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:46,424 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:46,426 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:46,428 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:46,429 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:42:46,429 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:42:47,398 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:42:47,398 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:42:47,398 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:42:47,402 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:42:47,405 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:47,405 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:47,433 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:47,434 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:42:47,434 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:47,436 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:47,436 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:47,464 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:47,465 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:47,466 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:47,467 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:47,467 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:42:47,468 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:42:49,672 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:42:49,673 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:42:49,673 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': "Jus d'orange"}
+2025-08-01 22:42:49,673 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Jus d'orange pour ligne 0
+2025-08-01 22:42:49,675 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Jus d'orange': 4.95
+2025-08-01 22:42:49,676 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Jus d'orange': 10.0%
+2025-08-01 22:42:49,676 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 4.95 = 4.95
+2025-08-01 22:42:49,677 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:42:49,680 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:49,680 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:49,706 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:49,710 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:42:49,711 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:49,713 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:49,714 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:49,739 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:49,740 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:49,742 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:49,743 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:49,745 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.95 €
+2025-08-01 22:42:49,746 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:42:51,252 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:51,252 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:51,291 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:51,294 - [FACTURATION] - INFO - ÉTAPE: 6 produits chargés
+2025-08-01 22:42:51,295 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:51,297 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:51,298 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:51,325 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:51,326 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:51,329 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:51,331 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:51,332 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 4.95 €
+2025-08-01 22:42:51,333 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 5.45 €
+2025-08-01 22:42:51,333 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:42:51,334 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:42:51,334 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:42:51,334 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 22:42:51,334 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 22:42:51,335 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 22:42:51,335 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 22:42:51,335 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 22:42:51,365 - [FACTURATION] - INFO - HTTP Request: DELETE https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?id=eq.ee8acba8-8248-4828-b4fc-b07274ef15bc "HTTP/2 200 OK"
+2025-08-01 22:42:51,398 - [FACTURATION] - INFO - HTTP Request: DELETE https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?id=eq.f400126f-3c8a-4dfd-8f2d-814abda21320 "HTTP/2 200 OK"
+2025-08-01 22:42:51,398 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 2 supprimés
+2025-08-01 22:42:51,399 - [FACTURATION] - INFO - DÉTAIL: Supprimé: vggvf (ID: ee8acba8-8248-4828-b4fc-b07274ef15bc)
+2025-08-01 22:42:51,399 - [FACTURATION] - INFO - DÉTAIL: Supprimé: test (ID: f400126f-3c8a-4dfd-8f2d-814abda21320)
+2025-08-01 22:42:51,428 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:51,428 - [FACTURATION] - INFO - ÉTAPE: Produits originaux mis à jour depuis la base
+2025-08-01 22:42:51,429 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 4.95 €, TTC: 5.45 €
+2025-08-01 22:42:51,455 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 22:42:51,685 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025023.xlsx "HTTP/2 200 OK"
+2025-08-01 22:42:53,454 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025023.pdf "HTTP/2 200 OK"
+2025-08-01 22:42:53,489 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 22:42:53,522 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 22:42:53,523 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025023.pdf
+2025-08-01 22:42:53,523 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 22:42:53,524 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 22:42:53,524 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 95142 bytes
+2025-08-01 22:42:53,525 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 22:42:59,707 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:42:59,708 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:42:59,780 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:42:59,784 - [FACTURATION] - INFO - ÉTAPE: 4 produits chargés
+2025-08-01 22:42:59,785 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:42:59,787 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:42:59,788 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:42:59,825 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:42:59,827 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:42:59,828 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:42:59,829 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 22:42:59,831 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:42:59,832 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:42:59,832 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:14,334 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:14,334 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:14,576 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:14,587 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:14,590 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:14,595 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:14,597 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:14,637 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:14,638 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:14,640 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:14,640 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 22:56:14,641 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:14,645 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:14,647 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:16,134 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:16,134 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:16,178 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:16,179 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:16,179 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:16,181 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:16,181 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:16,210 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:16,211 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:16,211 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:16,212 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:16,213 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:16,213 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:22,237 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:22,237 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:22,322 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:22,326 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:22,327 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:22,330 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:22,331 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:22,375 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:22,378 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:22,380 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:22,383 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:22,385 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:22,386 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:28,832 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:28,833 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:28,914 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:28,918 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:28,919 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:28,923 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:28,924 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:28,977 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:28,980 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:28,982 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:28,986 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:28,988 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:28,988 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:31,212 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:56:31,212 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:56:31,213 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 22:56:31,216 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:56:31,218 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:31,218 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:31,265 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:31,268 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:31,268 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:31,271 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:31,272 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:31,316 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:31,318 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:31,320 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:31,323 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:31,325 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:31,326 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:34,272 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:56:34,272 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:56:34,273 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': 'Divers pain'}
+2025-08-01 22:56:34,273 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Divers pain pour ligne 0
+2025-08-01 22:56:34,275 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Divers pain': nan
+2025-08-01 22:56:34,276 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Divers pain': 5.5%
+2025-08-01 22:56:34,277 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:56:34,280 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:34,281 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:34,336 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:34,338 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:34,339 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:34,342 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:34,343 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:34,390 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:34,392 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:34,394 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:34,397 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:34,399 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 22:56:34,399 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 22:56:38,245 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 22:56:38,247 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 22:56:38,247 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': '120'}
+2025-08-01 22:56:38,247 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 120 pour ligne 0
+2025-08-01 22:56:38,249 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 120.0 = 120.0
+2025-08-01 22:56:38,251 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 22:56:38,255 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:38,255 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:38,300 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:38,303 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:38,304 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:38,307 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:38,308 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:38,343 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:38,344 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:38,346 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:38,349 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:38,350 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 120.00 €
+2025-08-01 22:56:38,351 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 126.60 €
+2025-08-01 22:56:41,867 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 22:56:41,868 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 22:56:41,919 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 22:56:41,921 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 22:56:41,921 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 22:56:41,925 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 22:56:41,926 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 22:56:41,965 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 22:56:41,966 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 22:56:41,969 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 22:56:41,972 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 22:56:41,975 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 120.00 €
+2025-08-01 22:56:41,976 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 126.60 €
+2025-08-01 22:56:41,977 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 22:56:41,977 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 22:56:41,977 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 22:56:41,977 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 22:56:41,977 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 23:00:02,368 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:00:02,368 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:00:02,639 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:00:02,648 - [FACTURATION] - INFO - ÉTAPE: 2 produits chargés
+2025-08-01 23:00:02,650 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:00:02,654 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:00:02,655 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:00:02,692 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:00:02,693 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:00:02,694 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:00:02,696 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:00:02,698 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 120.00 €
+2025-08-01 23:00:02,698 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 126.60 €
+2025-08-01 23:00:02,699 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 23:00:02,699 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 23:00:02,699 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 23:00:02,699 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 23:00:02,699 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 23:00:02,700 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 23:00:02,700 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 23:00:02,700 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 23:00:02,730 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture "HTTP/2 201 Created"
+2025-08-01 23:00:02,731 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 1 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 23:00:02,731 - [FACTURATION] - INFO - DÉTAIL: Ajouté: Divers pain
+2025-08-01 23:00:02,767 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:00:02,768 - [FACTURATION] - INFO - ÉTAPE: Produits originaux mis à jour depuis la base
+2025-08-01 23:00:02,768 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 120.00 €, TTC: 126.60 €
+2025-08-01 23:00:02,801 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 23:00:03,027 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_annee001.xlsx "HTTP/2 200 OK"
+2025-08-01 23:00:04,396 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_annee001.pdf "HTTP/2 200 OK"
+2025-08-01 23:00:04,442 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 400 Bad Request"
+2025-08-01 23:00:04,443 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_annee001.pdf
+2025-08-01 23:00:04,443 - [FACTURATION] - INFO - ÉTAPE: Données insertées: False
+2025-08-01 23:00:04,444 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 23:00:04,445 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 96427 bytes
+2025-08-01 23:00:04,446 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 23:03:01,505 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:01,505 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:01,768 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:01,773 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:01,777 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:01,781 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:01,782 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:01,823 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:01,824 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:01,827 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:01,827 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-01 23:03:01,828 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:01,829 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 23:03:01,829 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 23:03:05,585 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 23:03:05,585 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-01 23:03:05,585 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-01 23:03:05,588 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 23:03:05,591 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:05,591 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:05,632 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:05,636 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:05,636 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:05,639 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:05,640 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:05,672 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:05,674 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:05,676 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:05,678 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:05,679 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 23:03:05,680 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 23:03:08,625 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 23:03:08,626 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 23:03:08,626 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': 'Divers pain'}
+2025-08-01 23:03:08,626 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Divers pain pour ligne 0
+2025-08-01 23:03:08,629 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Divers pain': 0.0
+2025-08-01 23:03:08,631 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Divers pain': 5.5%
+2025-08-01 23:03:08,632 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 0.0 = 0.0
+2025-08-01 23:03:08,633 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 23:03:08,636 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:08,636 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:08,676 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:08,678 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:08,678 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:08,680 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:08,681 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:08,713 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:08,714 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:08,717 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:08,719 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:08,720 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-01 23:03:08,721 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-01 23:03:13,832 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-01 23:03:13,833 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-01 23:03:13,833 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': 100}
+2025-08-01 23:03:13,833 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Prix unitaire = 100 pour ligne 0
+2025-08-01 23:03:13,836 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 100.0 = 100.0
+2025-08-01 23:03:13,837 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-01 23:03:13,845 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:13,845 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:13,911 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:13,915 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:13,916 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:13,918 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:13,919 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:13,955 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:13,959 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:13,962 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:13,964 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:13,966 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-01 23:03:13,969 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-01 23:03:16,519 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:16,520 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:16,570 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:16,573 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:16,573 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:16,576 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:16,577 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:16,620 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:16,622 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:16,624 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:16,626 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:16,628 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-01 23:03:16,628 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-01 23:03:16,629 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 23:03:16,629 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 23:03:16,629 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 23:03:16,629 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 23:03:16,629 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 23:03:16,630 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 23:03:16,631 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 23:03:16,631 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 23:03:16,631 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 23:03:16,632 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-01 23:03:16,677 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 23:03:16,881 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025001.xlsx "HTTP/2 200 OK"
+2025-08-01 23:03:18,673 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025001.pdf "HTTP/2 200 OK"
+2025-08-01 23:03:18,718 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 23:03:18,764 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 23:03:18,765 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025001.pdf
+2025-08-01 23:03:18,765 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 23:03:18,766 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 23:03:18,767 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 94909 bytes
+2025-08-01 23:03:18,768 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-01 23:03:28,294 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-01 23:03:28,294 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-01 23:03:28,373 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-01 23:03:28,378 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-01 23:03:28,379 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-01 23:03:28,382 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-01 23:03:28,383 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-01 23:03:28,430 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-01 23:03:28,434 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-01 23:03:28,436 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-01 23:03:28,438 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-01 23:03:28,440 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-01 23:03:28,441 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-01 23:03:28,442 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-01 23:03:28,442 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-01 23:03:28,442 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-01 23:03:28,442 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-01 23:03:28,442 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-01 23:03:28,444 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-01 23:03:28,444 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-01 23:03:28,444 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-01 23:03:28,444 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-01 23:03:28,445 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-01 23:03:28,490 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-01 23:03:28,628 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025002.xlsx "HTTP/2 400 Bad Request"
+2025-08-01 23:03:29,937 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025002.pdf "HTTP/2 400 Bad Request"
+2025-08-01 23:03:29,980 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-01 23:03:30,026 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-01 23:03:30,029 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025002.pdf
+2025-08-01 23:03:30,029 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-01 23:03:30,030 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-01 23:03:30,031 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 94909 bytes
+2025-08-01 23:03:30,032 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 08:17:46,093 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 08:17:46,102 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 08:17:46,356 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 08:17:46,381 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 08:17:46,382 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 08:17:46,403 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 08:17:46,406 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 08:17:46,452 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:17:46,454 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 08:17:46,455 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 08:17:46,455 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 08:17:46,457 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 08:17:46,458 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 08:17:46,459 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:24,021 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:24,022 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:24,304 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:24,311 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:24,313 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:24,320 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:24,321 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:24,378 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:24,380 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:24,382 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:24,382 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 09:34:24,384 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:24,385 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:24,386 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:30,046 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:30,046 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:30,106 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:30,108 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:30,108 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:30,111 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:30,111 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:30,148 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:30,148 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:30,149 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:30,151 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:30,152 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:30,152 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:35,227 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:35,227 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:35,297 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:35,301 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:35,303 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:35,308 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:35,309 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:35,348 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:35,351 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:35,352 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:35,354 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:35,355 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:35,356 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:41,232 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:41,233 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:41,294 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:41,299 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:41,300 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:41,304 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:41,305 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:41,337 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:41,339 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:41,340 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:41,342 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:41,343 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:41,344 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:45,289 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:45,290 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:45,326 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:45,331 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:45,331 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:45,336 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:45,337 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:45,367 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:45,369 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:45,371 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:45,374 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:45,376 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:45,376 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:48,404 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:34:48,405 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:34:48,405 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-02 09:34:48,409 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:34:48,412 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:48,413 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:48,441 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:48,445 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:48,445 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:48,448 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:48,449 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:48,486 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:48,487 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:48,490 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:48,492 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:48,494 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:34:48,494 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:34:53,316 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:34:53,316 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:34:53,316 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': 'Mini viennoiserie'}
+2025-08-02 09:34:53,317 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Produit = Mini viennoiserie pour ligne 0
+2025-08-02 09:34:53,321 - [FACTURATION] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Mini viennoiserie': 0.55
+2025-08-02 09:34:53,323 - [FACTURATION] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Mini viennoiserie': 10.0%
+2025-08-02 09:34:53,324 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 0.55 = 0.55
+2025-08-02 09:34:53,325 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:34:53,327 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:53,327 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:53,355 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:53,359 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:53,359 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:53,362 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:53,363 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:53,393 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:53,394 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:53,396 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:53,398 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:53,400 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.55 €
+2025-08-02 09:34:53,400 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.61 €
+2025-08-02 09:34:55,014 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:34:55,014 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:34:55,014 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-02 09:34:55,020 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:34:55,024 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:55,024 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:55,055 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:55,058 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:55,059 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:55,062 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:55,063 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:55,089 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:55,090 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:55,091 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:55,092 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:55,093 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.55 €
+2025-08-02 09:34:55,094 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.61 €
+2025-08-02 09:34:56,734 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:34:56,735 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:34:56,735 - [FACTURATION] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-02 09:34:56,739 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:34:56,742 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:34:56,742 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:34:56,782 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:34:56,786 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:34:56,787 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:34:56,791 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:34:56,792 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:34:56,821 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:34:56,821 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:34:56,823 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:34:56,825 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:34:56,826 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.55 €
+2025-08-02 09:34:56,827 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.61 €
+2025-08-02 09:35:02,878 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:35:02,878 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:35:02,878 - [FACTURATION] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Quantité': 100}
+2025-08-02 09:35:02,879 - [FACTURATION] - INFO - ÉTAPE: Mise à jour Quantité = 100 pour ligne 0
+2025-08-02 09:35:02,880 - [FACTURATION] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 100 × 0.55 = 55.00000000000001
+2025-08-02 09:35:02,881 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:35:02,884 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:35:02,885 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:35:02,953 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:02,958 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:35:02,959 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:35:02,963 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:35:02,964 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:35:03,008 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:03,010 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:35:03,013 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:35:03,016 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:35:03,017 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 55.00 €
+2025-08-02 09:35:03,018 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 60.50 €
+2025-08-02 09:35:05,210 - [FACTURATION] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:35:05,211 - [FACTURATION] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 0 lignes ajoutées, 2 lignes supprimées
+2025-08-02 09:35:05,211 - [FACTURATION] - INFO - ÉTAPE: Suppression ligne 1
+2025-08-02 09:35:05,212 - [FACTURATION] - INFO - ÉTAPE: Suppression ligne 2
+2025-08-02 09:35:05,213 - [FACTURATION] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:35:05,215 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:35:05,215 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:35:05,271 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:05,275 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:35:05,276 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:35:05,279 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:35:05,280 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:35:05,324 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:05,326 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:35:05,329 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:35:05,332 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:35:05,334 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 55.00 €
+2025-08-02 09:35:05,334 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 60.50 €
+2025-08-02 09:35:10,500 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:35:10,500 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:35:10,563 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:10,567 - [FACTURATION] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:35:10,568 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:35:10,573 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:35:10,574 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:35:10,611 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:10,614 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:35:10,616 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:35:10,618 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:35:10,619 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 55.00 €
+2025-08-02 09:35:10,620 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 60.50 €
+2025-08-02 09:35:10,620 - [FACTURATION] - INFO - ÉTAPE: Début de génération de facture
+2025-08-02 09:35:10,620 - [FACTURATION] - INFO - ÉTAPE: Client sélectionné: Le Prisme SAS
+2025-08-02 09:35:10,621 - [FACTURATION] - INFO - ÉTAPE: Date prestation: None
+2025-08-02 09:35:10,621 - [FACTURATION] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-02 09:35:10,621 - [FACTURATION] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-02 09:35:10,623 - [FACTURATION] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-02 09:35:10,623 - [FACTURATION] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-02 09:35:10,623 - [FACTURATION] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-02 09:35:10,656 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture "HTTP/2 201 Created"
+2025-08-02 09:35:10,658 - [FACTURATION] - INFO - ÉTAPE: Produits sauvegardés - 1 ajoutés, 0 modifiés, 0 supprimés
+2025-08-02 09:35:10,659 - [FACTURATION] - INFO - DÉTAIL: Ajouté: Mini viennoiserie
+2025-08-02 09:35:10,688 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:10,689 - [FACTURATION] - INFO - ÉTAPE: Produits originaux mis à jour depuis la base
+2025-08-02 09:35:10,689 - [FACTURATION] - INFO - ÉTAPE: Totaux recalculés - HT: 55.00 €, TTC: 60.50 €
+2025-08-02 09:35:10,725 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-02 09:35:10,897 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025003.xlsx "HTTP/2 400 Bad Request"
+2025-08-02 09:35:14,499 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025003.pdf "HTTP/2 400 Bad Request"
+2025-08-02 09:35:14,546 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-02 09:35:14,602 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-02 09:35:14,604 - [FACTURATION] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025003.pdf
+2025-08-02 09:35:14,604 - [FACTURATION] - INFO - ÉTAPE: Données insertées: True
+2025-08-02 09:35:14,606 - [FACTURATION] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-02 09:35:14,606 - [FACTURATION] - INFO - ÉTAPE: PDF lu, taille: 96093 bytes
+2025-08-02 09:35:14,607 - [FACTURATION] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 09:35:16,293 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:35:16,293 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:35:16,325 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:16,330 - [FACTURATION] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:35:16,331 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:35:16,334 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:35:16,335 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:35:16,371 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:16,374 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:35:40,391 - [FACTURATION] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:35:40,392 - [FACTURATION] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:35:40,466 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:35:40,470 - [FACTURATION] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:35:40,470 - [FACTURATION] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:35:40,473 - [FACTURATION] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:35:40,474 - [FACTURATION] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:35:40,520 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:40,521 - [FACTURATION] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:35:40,522 - [FACTURATION] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:35:40,522 - [FACTURATION] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 09:35:40,523 - [FACTURATION] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:35:40,524 - [FACTURATION] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:35:40,524 - [FACTURATION] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:35:42,961 - [FACTURATION] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:35:43,006 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:43,011 - [FACTURATION] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:35:43,011 - [FACTURATION] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:35:43,069 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:35:43,072 - [FACTURATION] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:35:43,073 - [FACTURATION] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:35:43,189 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:43,249 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:43,322 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:43,331 - [FACTURATION] - INFO - ÉTAPE: Statistiques calculées - 2 factures, Total: 166.00€, Reste à payer: 166.00€
+2025-08-02 09:35:43,334 - [FACTURATION] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:35:52,446 - [FACTURATION] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:35:52,530 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:52,539 - [FACTURATION] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:35:52,541 - [FACTURATION] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:35:52,640 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:52,684 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:52,769 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:52,777 - [FACTURATION] - INFO - ÉTAPE: Statistiques calculées - 2 factures, Total: 166.00€, Reste à payer: 166.00€
+2025-08-02 09:35:52,782 - [FACTURATION] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:35:54,249 - [FACTURATION] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:35:54,295 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:35:54,302 - [FACTURATION] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:35:54,303 - [FACTURATION] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:35:54,371 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:54,417 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:54,477 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:35:54,484 - [FACTURATION] - INFO - ÉTAPE: Statistiques calculées - 2 factures, Total: 166.00€, Reste à payer: 166.00€
+2025-08-02 09:35:54,488 - [FACTURATION] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:36:11,945 - [FACTURATION] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:36:12,151 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:36:12,159 - [FACTURATION] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:36:12,160 - [FACTURATION] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:36:12,252 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:36:12,314 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:36:12,323 - [FACTURATION] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: True
+2025-08-02 09:36:12,368 - [FACTURATION] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 09:36:12,371 - [FACTURATION] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 09:36:12,420 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:36:12,427 - [FACTURATION] - INFO - ÉTAPE: Statistiques calculées - 2 factures, Total: 166.00€, Reste à payer: 166.00€
+2025-08-02 09:36:12,431 - [FACTURATION] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:38:58,604 - [FACTURATION] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:38:58,848 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:38:58,857 - [FACTURATION] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:38:58,857 - [FACTURATION] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:38:58,900 - [FACTURATION] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:38:58,902 - [FACTURATION] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:38:58,903 - [FACTURATION] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:38:59,035 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:38:59,112 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:38:59,241 - [FACTURATION] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:38:59,249 - [FACTURATION] - INFO - ÉTAPE: Statistiques calculées - 2 factures, Total: 166.00€, Reste à payer: 105.50€
+2025-08-02 09:38:59,253 - [FACTURATION] - INFO - ÉTAPE: Page Gestion des Factures affichée

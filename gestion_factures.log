@@ -1,0 +1,349 @@
+2025-08-02 08:49:04,435 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:49:04,778 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:49:04,787 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:49:04,787 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 08:49:04,838 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 08:49:04,841 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 08:49:04,861 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:49:18,852 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:49:19,293 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:49:19,303 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:49:19,315 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:49:25,913 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:49:25,993 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:49:25,999 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:49:26,008 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:16,738 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:16,819 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:16,826 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:16,835 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:18,886 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:18,919 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:18,924 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:18,933 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:20,214 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:20,269 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:20,277 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:20,278 - [GESTION_FACTURES] - INFO - ÉTAPE: Application des filtres - Client: None, Période: 2025-08-02 à 2025-08-06
+2025-08-02 08:50:20,338 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&date=gte.2025-08-02&date=lte.2025-08-06&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 08:50:20,341 - [GESTION_FACTURES] - INFO - ÉTAPE: 0 factures récupérées
+2025-08-02 08:50:20,344 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:22,064 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:22,114 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:22,119 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:22,121 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:23,098 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:23,145 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:23,150 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:23,153 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:23,186 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:23,231 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:23,235 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:23,235 - [GESTION_FACTURES] - INFO - ÉTAPE: Application des filtres - Client: None, Période: None à 2025-08-06
+2025-08-02 08:50:23,266 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&date=lte.2025-08-06&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 08:50:23,267 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 08:50:23,274 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:24,446 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:24,485 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:24,492 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:24,501 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:24,961 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:25,006 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:25,012 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:25,021 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:50:25,048 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:50:25,082 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:50:25,085 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:50:25,085 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 08:50:25,136 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 08:50:25,137 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 08:50:25,146 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:51:52,746 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:51:53,014 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:51:53,021 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:51:53,030 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:51:53,573 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:51:53,618 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:51:53,625 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:51:53,631 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025001
+2025-08-02 08:51:53,631 - [GESTION_FACTURES] - WARNING - ÉTAPE: PDF facture 2025001 non trouvé: data/factures/facture_2025001.pdf
+2025-08-02 08:51:53,635 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:51:56,746 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:51:56,787 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:51:56,793 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:51:56,802 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 08:51:57,263 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 08:51:57,293 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 08:51:57,299 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 08:51:57,304 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025002
+2025-08-02 08:51:57,305 - [GESTION_FACTURES] - WARNING - ÉTAPE: PDF facture 2025002 non trouvé: data/factures/facture_2025002.pdf
+2025-08-02 08:51:57,308 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:20,623 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:20,864 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:20,874 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:20,875 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:16:20,930 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:16:20,932 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:16:20,933 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:21,207 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:21,276 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:21,339 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:21,346 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:25,240 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:25,295 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:25,301 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:25,301 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:25,352 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:25,397 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:25,459 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:25,466 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:27,055 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:27,100 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:27,107 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:27,107 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:27,150 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:27,195 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:27,246 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:27,248 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025001 depuis Supabase Storage
+2025-08-02 09:16:27,836 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025001.pdf "HTTP/2 200 OK"
+2025-08-02 09:16:27,841 - [GESTION_FACTURES] - INFO - ÉTAPE: Téléchargement facture 2025001 proposé depuis Storage
+2025-08-02 09:16:27,846 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:28,777 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:28,816 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:28,822 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:28,822 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:28,853 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:28,903 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:28,947 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:28,953 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:32,371 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:32,418 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:32,423 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:32,424 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:32,460 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:32,502 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:32,552 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:32,559 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:32,985 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:33,022 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:33,028 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:33,029 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:33,068 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:33,103 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:33,154 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:33,156 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025002 depuis Supabase Storage
+2025-08-02 09:16:33,618 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025002.pdf "HTTP/2 200 OK"
+2025-08-02 09:16:33,622 - [GESTION_FACTURES] - INFO - ÉTAPE: Téléchargement facture 2025002 proposé depuis Storage
+2025-08-02 09:16:33,628 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:16:34,860 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:16:34,900 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:16:34,906 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:16:34,907 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:16:34,956 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:34,997 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:35,040 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:16:35,047 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:10,701 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:10,812 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:10,815 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:10,815 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:17:10,861 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:17:10,862 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:17:10,863 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:10,951 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:11,005 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:11,048 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:11,053 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:12,874 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:12,917 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:12,923 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:12,923 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:17:12,962 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:17:12,963 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:17:12,970 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:13,008 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:13,054 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:13,099 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:13,106 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:45,251 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:45,356 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:45,363 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:45,363 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:17:45,407 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:17:45,409 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:17:45,409 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:45,487 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:45,569 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:45,619 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:45,626 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:47,039 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:47,086 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:47,092 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:47,092 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:47,162 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:47,205 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:47,261 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:47,263 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025002 depuis Supabase Storage
+2025-08-02 09:17:47,462 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025002.pdf "HTTP/2 200 OK"
+2025-08-02 09:17:47,467 - [GESTION_FACTURES] - INFO - ÉTAPE: Téléchargement facture 2025002 proposé depuis Storage
+2025-08-02 09:17:47,477 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:48,487 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:48,523 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:48,529 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:48,529 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:48,571 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:48,636 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:48,686 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:48,691 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:55,259 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:55,329 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:55,335 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:55,335 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:55,417 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:55,471 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:55,537 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:55,544 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:17:55,867 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:17:55,913 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:17:55,919 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:17:55,919 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:17:55,972 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:56,011 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:56,061 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:17:56,064 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de téléchargement facture 2025001 depuis Supabase Storage
+2025-08-02 09:17:56,274 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025001.pdf "HTTP/2 200 OK"
+2025-08-02 09:17:56,277 - [GESTION_FACTURES] - INFO - ÉTAPE: Téléchargement facture 2025001 proposé depuis Storage
+2025-08-02 09:17:56,280 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:00,433 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:00,473 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:00,477 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:00,478 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:00,528 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:00,579 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:00,634 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:00,641 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:26,913 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:27,173 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:27,176 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:27,176 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:27,254 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:27,317 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:27,319 - [GESTION_FACTURES] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025002: True
+2025-08-02 09:18:27,371 - [GESTION_FACTURES] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025002 "HTTP/2 200 OK"
+2025-08-02 09:18:27,372 - [GESTION_FACTURES] - INFO - ÉTAPE: Statut paiement facture 2025002 mis à jour avec succès
+2025-08-02 09:18:27,426 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:27,430 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:28,887 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:28,940 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:28,945 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:28,946 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:28,998 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:29,035 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:29,041 - [GESTION_FACTURES] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025002: True
+2025-08-02 09:18:29,074 - [GESTION_FACTURES] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025002 "HTTP/2 200 OK"
+2025-08-02 09:18:29,077 - [GESTION_FACTURES] - INFO - ÉTAPE: Statut paiement facture 2025002 mis à jour avec succès
+2025-08-02 09:18:29,077 - [GESTION_FACTURES] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025001: True
+2025-08-02 09:18:29,126 - [GESTION_FACTURES] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025001 "HTTP/2 200 OK"
+2025-08-02 09:18:29,127 - [GESTION_FACTURES] - INFO - ÉTAPE: Statut paiement facture 2025001 mis à jour avec succès
+2025-08-02 09:18:29,182 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:29,190 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:31,518 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:31,558 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:31,564 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:31,565 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:18:31,597 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:18:31,601 - [GESTION_FACTURES] - INFO - ÉTAPE: 2 factures récupérées
+2025-08-02 09:18:31,601 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:31,653 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:31,712 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:31,760 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:31,767 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:35,047 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:35,083 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:35,089 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:35,089 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:35,128 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:35,164 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:35,213 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:35,220 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:35,950 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:35,983 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:35,988 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:35,989 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:36,036 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,077 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,119 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,127 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:18:36,420 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:36,467 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:36,473 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:36,474 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:36,518 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,555 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,597 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,602 - [GESTION_FACTURES] - INFO - ÉTAPE: Tentative de suppression facture 2025002
+2025-08-02 09:18:36,633 - [GESTION_FACTURES] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025002 "HTTP/2 200 OK"
+2025-08-02 09:18:36,636 - [GESTION_FACTURES] - INFO - ÉTAPE: Facture 2025002 marquée comme inactive
+2025-08-02 09:18:36,671 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:18:36,714 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:18:36,748 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:18:36,751 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:18:36,751 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:18:36,787 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,826 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:18:36,831 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:20:12,093 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:20:12,351 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:20:12,360 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:20:12,360 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:20:12,406 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:20:12,408 - [GESTION_FACTURES] - INFO - ÉTAPE: 1 factures récupérées
+2025-08-02 09:20:12,408 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:20:12,516 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:12,574 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:12,579 - [GESTION_FACTURES] - INFO - ÉTAPE: Statistiques calculées - 1 factures, Total: 105.50€, Reste à payer: 0.00€
+2025-08-02 09:20:12,583 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:20:16,440 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:20:16,488 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:20:16,495 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:20:16,495 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:20:16,543 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:16,548 - [GESTION_FACTURES] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025001: False
+2025-08-02 09:20:16,596 - [GESTION_FACTURES] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025001 "HTTP/2 200 OK"
+2025-08-02 09:20:16,597 - [GESTION_FACTURES] - INFO - ÉTAPE: Statut paiement facture 2025001 mis à jour avec succès
+2025-08-02 09:20:16,637 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:16,643 - [GESTION_FACTURES] - INFO - ÉTAPE: Statistiques calculées - 1 factures, Total: 105.50€, Reste à payer: 0.00€
+2025-08-02 09:20:16,647 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:20:24,294 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:20:24,367 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:20:24,373 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:20:24,374 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 09:20:24,422 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 09:20:24,424 - [GESTION_FACTURES] - INFO - ÉTAPE: 1 factures récupérées
+2025-08-02 09:20:24,425 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:20:24,503 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:24,554 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:24,562 - [GESTION_FACTURES] - INFO - ÉTAPE: Statistiques calculées - 1 factures, Total: 105.50€, Reste à payer: 105.50€
+2025-08-02 09:20:24,566 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:20:30,563 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 09:20:30,636 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:20:30,642 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 09:20:30,643 - [GESTION_FACTURES] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 09:20:30,731 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:30,774 - [GESTION_FACTURES] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 09:20:30,779 - [GESTION_FACTURES] - INFO - ÉTAPE: Statistiques calculées - 1 factures, Total: 105.50€, Reste à payer: 105.50€
+2025-08-02 09:20:30,782 - [GESTION_FACTURES] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 09:20:31,259 - [GESTION_FACTURES] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:20:31,259 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:20:31,303 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:20:31,305 - [GESTION_FACTURES] - INFO - ÉTAPE: 3 produits chargés
+2025-08-02 09:20:31,305 - [GESTION_FACTURES] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:20:31,306 - [GESTION_FACTURES] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:20:31,307 - [GESTION_FACTURES] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:20:31,348 - [GESTION_FACTURES] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:20:31,350 - [GESTION_FACTURES] - INFO - ÉTAPE: 1 clients disponibles
+2025-08-02 09:20:31,351 - [GESTION_FACTURES] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:20:31,351 - [GESTION_FACTURES] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 09:20:31,352 - [GESTION_FACTURES] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:20:31,353 - [GESTION_FACTURES] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:20:31,354 - [GESTION_FACTURES] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
