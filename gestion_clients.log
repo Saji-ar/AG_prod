@@ -1,0 +1,642 @@
+2025-08-02 09:42:56,722 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:42:56,722 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:42:56,964 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:42:56,967 - [GESTION_CLIENTS] - INFO - ÉTAPE: 1 clients récupérés
+2025-08-02 09:42:57,025 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 09:42:57,031 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 09:44:15,314 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:44:15,316 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:44:15,417 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:44:15,421 - [GESTION_CLIENTS] - INFO - ÉTAPE: 1 clients récupérés
+2025-08-02 09:44:15,427 - [GESTION_CLIENTS] - INFO - ÉTAPE: Tentative d'ajout client: Aux Pains Gourmands
+2025-08-02 09:44:15,480 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients "HTTP/2 409 Conflict"
+2025-08-02 09:44:15,483 - [GESTION_CLIENTS] - ERROR - ÉTAPE: Erreur ajout client Aux Pains Gourmands: {'message': 'duplicate key value violates unique constraint "Clients_pkey"', 'code': '23505', 'hint': None, 'details': 'Key (id)=(1) already exists.'}
+2025-08-02 09:44:15,532 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 09:44:15,543 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 09:47:20,729 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:47:20,731 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:47:20,985 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:47:20,991 - [GESTION_CLIENTS] - INFO - ÉTAPE: 1 clients récupérés
+2025-08-02 09:47:20,997 - [GESTION_CLIENTS] - INFO - ÉTAPE: Tentative d'ajout client: Aux Pains Gourmands
+2025-08-02 09:47:21,038 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients "HTTP/2 201 Created"
+2025-08-02 09:47:21,039 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client Aux Pains Gourmands ajouté avec ID 2
+2025-08-02 09:47:21,071 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:47:21,116 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:47:21,117 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:47:21,156 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:47:21,157 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 09:47:21,190 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 09:47:21,194 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 09:48:08,622 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:48:08,624 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:48:08,701 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:08,706 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 09:48:08,760 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.2 "HTTP/2 200 OK"
+2025-08-02 09:48:08,770 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 09:48:11,525 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:48:11,527 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:48:11,561 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:11,565 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 09:48:11,615 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.2 "HTTP/2 200 OK"
+2025-08-02 09:48:11,620 - [GESTION_CLIENTS] - INFO - ÉTAPE: Tentative de modification client ID 2
+2025-08-02 09:48:11,663 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?id=eq.2 "HTTP/2 200 OK"
+2025-08-02 09:48:11,665 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client ID 2 modifié avec succès
+2025-08-02 09:48:11,704 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:11,746 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 09:48:11,748 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 09:48:11,787 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:11,789 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 09:48:11,840 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.2 "HTTP/2 200 OK"
+2025-08-02 09:48:11,845 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 09:48:15,585 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:15,585 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:15,616 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:15,617 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:15,617 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:15,618 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:15,619 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:15,648 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:15,649 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:15,650 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:15,650 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 09:48:15,651 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:15,652 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:48:15,652 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:48:17,801 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:17,801 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:17,856 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:17,860 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:17,861 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:17,863 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:17,864 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:17,893 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:17,896 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:17,898 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:17,902 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:17,903 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:48:17,904 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:48:19,431 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:48:19,432 - [GESTION_CLIENTS] - INFO - ÉTAPE: État récupéré - 0 lignes modifiées, 1 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:48:19,432 - [GESTION_CLIENTS] - INFO - ÉTAPE: Ajout nouvelle ligne: {}
+2025-08-02 09:48:19,433 - [GESTION_CLIENTS] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:48:19,437 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:19,437 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:19,472 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:19,476 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:19,476 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:19,478 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:19,479 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:19,512 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:19,515 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:19,517 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:19,520 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:19,521 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:48:19,522 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:48:21,897 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:48:21,898 - [GESTION_CLIENTS] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:48:21,898 - [GESTION_CLIENTS] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Produit': 'Divers pain'}
+2025-08-02 09:48:21,903 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour Produit = Divers pain pour ligne 0
+2025-08-02 09:48:21,909 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour prix unitaire pour produit 'Divers pain': 0.0
+2025-08-02 09:48:21,910 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour TVA pour produit 'Divers pain': 5.5%
+2025-08-02 09:48:21,911 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 0.0 = 0.0
+2025-08-02 09:48:21,912 - [GESTION_CLIENTS] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:48:21,915 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:21,916 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:21,946 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:21,949 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:21,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:21,952 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:21,953 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:21,996 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:21,998 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:22,001 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:22,003 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:22,004 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 09:48:22,005 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 09:48:24,842 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de df_on_change - Gestion des modifications du DataFrame
+2025-08-02 09:48:24,843 - [GESTION_CLIENTS] - INFO - ÉTAPE: État récupéré - 1 lignes modifiées, 0 lignes ajoutées, 0 lignes supprimées
+2025-08-02 09:48:24,843 - [GESTION_CLIENTS] - INFO - ÉTAPE: Traitement ligne 0 - Modifications: {'Prix unitaire': 100}
+2025-08-02 09:48:24,843 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour Prix unitaire = 100 pour ligne 0
+2025-08-02 09:48:24,844 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul prix total HT ligne 0: 1 × 100.0 = 100.0
+2025-08-02 09:48:24,847 - [GESTION_CLIENTS] - INFO - ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé
+2025-08-02 09:48:24,851 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:24,851 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:24,884 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:24,888 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:24,888 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:24,891 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:24,892 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:24,926 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:24,927 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:24,930 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:24,934 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:24,936 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 09:48:24,936 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 09:48:26,999 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:26,999 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:27,041 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:27,045 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:27,045 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:27,047 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:27,048 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:27,084 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:27,086 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:27,088 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:27,090 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:27,091 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 09:48:27,091 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 09:48:27,092 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de génération de facture
+2025-08-02 09:48:27,093 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client sélectionné: Aux Pains Gourmands
+2025-08-02 09:48:27,093 - [GESTION_CLIENTS] - INFO - ÉTAPE: Date prestation: None
+2025-08-02 09:48:27,093 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-02 09:48:27,093 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-02 09:48:27,094 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-02 09:48:27,094 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-02 09:48:27,094 - [GESTION_CLIENTS] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-02 09:48:27,094 - [GESTION_CLIENTS] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-02 09:48:27,094 - [GESTION_CLIENTS] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-02 09:48:27,138 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-02 09:48:27,332 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025004.xlsx "HTTP/2 400 Bad Request"
+2025-08-02 09:48:29,217 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025004.pdf "HTTP/2 400 Bad Request"
+2025-08-02 09:48:29,256 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-02 09:48:29,298 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-02 09:48:29,300 - [GESTION_CLIENTS] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025004.pdf
+2025-08-02 09:48:29,300 - [GESTION_CLIENTS] - INFO - ÉTAPE: Données insertées: True
+2025-08-02 09:48:29,302 - [GESTION_CLIENTS] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-02 09:48:29,302 - [GESTION_CLIENTS] - INFO - ÉTAPE: PDF lu, taille: 95662 bytes
+2025-08-02 09:48:29,304 - [GESTION_CLIENTS] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 09:48:30,846 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 09:48:30,847 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 09:48:30,891 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 09:48:30,896 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 09:48:30,896 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 09:48:30,899 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 09:48:30,900 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 09:48:30,935 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 09:48:30,937 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 09:48:30,939 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 09:48:30,942 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 09:48:30,943 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 09:48:30,944 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:09:04,403 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:09:04,403 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:09:04,638 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:09:04,650 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:09:04,651 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:09:04,657 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:09:04,658 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:09:04,686 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:09:04,687 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:09:04,690 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:09:04,693 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:09:04,695 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:09:04,695 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:09:04,696 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de génération de facture
+2025-08-02 10:09:04,696 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client sélectionné: Aux Pains Gourmands
+2025-08-02 10:09:04,696 - [GESTION_CLIENTS] - INFO - ÉTAPE: Date prestation: None
+2025-08-02 10:09:04,696 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-02 10:09:04,696 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-02 10:09:04,698 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-02 10:09:04,698 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-02 10:09:04,698 - [GESTION_CLIENTS] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-02 10:09:04,699 - [GESTION_CLIENTS] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-02 10:09:04,699 - [GESTION_CLIENTS] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-02 10:09:04,742 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-02 10:09:04,864 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025005.xlsx "HTTP/2 400 Bad Request"
+2025-08-02 10:09:06,908 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025005.pdf "HTTP/2 400 Bad Request"
+2025-08-02 10:09:06,942 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-02 10:09:06,982 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-02 10:09:06,983 - [GESTION_CLIENTS] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025005.pdf
+2025-08-02 10:09:06,983 - [GESTION_CLIENTS] - INFO - ÉTAPE: Données insertées: True
+2025-08-02 10:09:06,984 - [GESTION_CLIENTS] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-02 10:09:06,984 - [GESTION_CLIENTS] - INFO - ÉTAPE: PDF lu, taille: 95650 bytes
+2025-08-02 10:09:06,985 - [GESTION_CLIENTS] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 10:09:08,617 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:09:08,617 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:09:08,648 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:09:08,649 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:09:08,650 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:09:08,651 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:09:08,652 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:09:08,686 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:09:08,687 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:09:08,689 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:09:08,691 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:09:08,693 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:09:08,694 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:09:22,707 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:09:22,709 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:09:22,777 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:09:22,781 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:09:22,782 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:09:22,784 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:09:22,785 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:09:22,827 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:09:22,830 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:09:22,832 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:09:22,835 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:09:22,836 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:09:22,837 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:09:22,837 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de génération de facture
+2025-08-02 10:09:22,837 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client sélectionné: Aux Pains Gourmands
+2025-08-02 10:09:22,838 - [GESTION_CLIENTS] - INFO - ÉTAPE: Date prestation: None
+2025-08-02 10:09:22,838 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-02 10:09:22,838 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-02 10:09:22,839 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-02 10:09:22,839 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-02 10:09:22,839 - [GESTION_CLIENTS] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-02 10:09:22,839 - [GESTION_CLIENTS] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-02 10:09:22,839 - [GESTION_CLIENTS] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-02 10:09:22,867 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-02 10:09:22,987 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025006.xlsx "HTTP/2 400 Bad Request"
+2025-08-02 10:09:29,393 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025006.pdf "HTTP/2 400 Bad Request"
+2025-08-02 10:09:29,467 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-02 10:09:29,514 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-02 10:09:29,515 - [GESTION_CLIENTS] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025006.pdf
+2025-08-02 10:09:29,515 - [GESTION_CLIENTS] - INFO - ÉTAPE: Données insertées: True
+2025-08-02 10:09:29,516 - [GESTION_CLIENTS] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-02 10:09:29,517 - [GESTION_CLIENTS] - INFO - ÉTAPE: PDF lu, taille: 97115 bytes
+2025-08-02 10:09:29,519 - [GESTION_CLIENTS] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 10:09:32,253 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:09:32,253 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:09:32,295 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:09:32,298 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:09:32,298 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:09:32,300 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:09:32,301 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:09:32,339 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:09:32,341 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:09:32,343 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:09:32,346 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:09:32,347 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:09:32,348 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:10:02,804 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:10:02,805 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:10:02,889 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:10:02,893 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:10:02,894 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:10:02,896 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:10:02,897 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:10:02,939 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:10:02,942 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:10:02,944 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:10:02,947 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:10:02,949 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:10:02,949 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:10:02,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de génération de facture
+2025-08-02 10:10:02,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Client sélectionné: Aux Pains Gourmands
+2025-08-02 10:10:02,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Date prestation: None
+2025-08-02 10:10:02,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nombre de lignes dans la facture: 1
+2025-08-02 10:10:02,950 - [GESTION_CLIENTS] - INFO - ÉTAPE: Début de validation des données de facture
+2025-08-02 10:10:02,951 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie - 1 ligne(s) valide(s)
+2025-08-02 10:10:02,951 - [GESTION_CLIENTS] - INFO - ÉTAPE: Validation réussie, génération de la facture en cours
+2025-08-02 10:10:02,951 - [GESTION_CLIENTS] - INFO - ÉTAPE: Sauvegarde des modifications de produits
+2025-08-02 10:10:02,952 - [GESTION_CLIENTS] - INFO - ÉTAPE: Produits sauvegardés - 0 ajoutés, 0 modifiés, 0 supprimés
+2025-08-02 10:10:02,952 - [GESTION_CLIENTS] - INFO - ÉTAPE: Totaux recalculés - HT: 100.00 €, TTC: 105.50 €
+2025-08-02 10:10:03,001 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture "HTTP/2 200 OK"
+2025-08-02 10:10:03,116 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025007.xlsx "HTTP/2 400 Bad Request"
+2025-08-02 10:10:04,799 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/factures/facture_2025007.pdf "HTTP/2 400 Bad Request"
+2025-08-02 10:10:04,847 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures "HTTP/2 201 Created"
+2025-08-02 10:10:04,896 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ligne_facture "HTTP/2 201 Created"
+2025-08-02 10:10:04,897 - [GESTION_CLIENTS] - INFO - ÉTAPE: Facture générée - Nom du fichier: facture_2025007.pdf
+2025-08-02 10:10:04,897 - [GESTION_CLIENTS] - INFO - ÉTAPE: Données insertées: True
+2025-08-02 10:10:04,899 - [GESTION_CLIENTS] - INFO - ÉTAPE: Lecture du fichier PDF généré
+2025-08-02 10:10:04,900 - [GESTION_CLIENTS] - INFO - ÉTAPE: PDF lu, taille: 95598 bytes
+2025-08-02 10:10:04,901 - [GESTION_CLIENTS] - INFO - ÉTAPE: Bouton de téléchargement affiché
+2025-08-02 10:10:06,111 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 10:10:06,112 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 10:10:06,154 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 10:10:06,158 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 10:10:06,159 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 10:10:06,161 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 10:10:06,162 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 10:10:06,194 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:10:06,195 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 10:10:06,197 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 10:10:06,200 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 10:10:06,202 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 100.00 €
+2025-08-02 10:10:06,202 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 105.50 €
+2025-08-02 10:10:28,992 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:10:29,085 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:10:29,092 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:10:29,092 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 10:10:29,139 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 10:10:29,142 - [GESTION_CLIENTS] - INFO - ÉTAPE: 6 factures récupérées
+2025-08-02 10:10:29,143 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:10:29,219 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,281 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,340 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,398 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,443 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,488 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,545 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:29,559 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:10:29,563 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:10:33,128 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:10:33,177 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:10:33,183 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:10:33,184 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:10:33,230 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,268 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,317 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,366 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,406 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,450 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,460 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:10:33,504 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:10:33,509 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:10:33,548 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:10:33,554 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:10:33,559 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:29,897 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:30,136 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:30,145 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:30,146 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:30,242 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,305 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,356 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,414 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,470 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,525 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,534 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:30,581 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:30,584 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:30,626 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:30,632 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:30,635 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:33,049 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:33,097 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:33,102 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:33,103 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:33,139 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,182 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,225 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,266 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,316 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,354 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,363 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:33,410 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:33,414 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:33,457 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:33,463 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:33,466 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:34,382 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:34,423 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:34,429 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:34,430 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:34,477 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,518 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,562 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,602 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,647 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,696 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,704 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:34,748 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:34,751 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:34,798 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:34,804 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:34,808 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:35,959 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:35,992 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:35,995 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:35,995 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:36,043 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,084 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,119 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,158 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,202 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,242 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,248 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:36,283 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:36,287 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:36,330 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:36,337 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:36,340 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:37,348 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:37,390 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:37,396 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:37,397 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:37,435 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,481 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,516 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,564 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,602 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,639 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,646 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:37,690 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:37,693 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:37,734 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:37,739 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:37,743 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:39,299 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:39,332 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:39,338 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:39,339 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:39,378 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,422 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,459 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,505 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,545 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,586 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,592 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:39,626 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:39,629 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:39,671 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:39,677 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:39,681 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 10:16:40,882 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 10:16:40,918 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 10:16:40,923 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 10:16:40,924 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 10:16:40,990 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,029 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,066 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,107 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,197 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,251 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,260 - [GESTION_CLIENTS] - INFO - ÉTAPE: Mise à jour statut paiement facture 2025003: False
+2025-08-02 10:16:41,297 - [GESTION_CLIENTS] - INFO - HTTP Request: PATCH https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?num_facture=eq.2025003 "HTTP/2 200 OK"
+2025-08-02 10:16:41,301 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statut paiement facture 2025003 mis à jour avec succès
+2025-08-02 10:16:41,343 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 10:16:41,351 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 527.50€
+2025-08-02 10:16:41,355 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:18:42,065 - [GESTION_CLIENTS] - INFO - Utilisateur authentifié avec succès
+2025-08-02 12:19:03,054 - [GESTION_CLIENTS] - INFO - Utilisateur authentifié avec succès
+2025-08-02 12:21:21,105 - [GESTION_CLIENTS] - INFO - Utilisateur authentifié avec succès
+2025-08-02 12:21:21,151 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 12:21:21,151 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 12:21:21,423 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 12:21:21,429 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 12:21:21,431 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 12:21:21,435 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 12:21:21,436 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 12:21:21,476 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:21,478 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 12:21:21,480 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 12:21:21,481 - [GESTION_CLIENTS] - INFO - ÉTAPE: Nouveau DataFrame créé dans la session
+2025-08-02 12:21:21,483 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 12:21:21,486 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 12:21:21,486 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 12:21:23,178 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:21:23,223 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:23,227 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:21:23,227 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 12:21:23,270 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 12:21:23,272 - [GESTION_CLIENTS] - INFO - ÉTAPE: 6 factures récupérées
+2025-08-02 12:21:23,273 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:21:23,391 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,441 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,583 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,764 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,824 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,884 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,936 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:23,943 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:21:23,947 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:21:24,178 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 12:21:24,179 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 12:21:24,220 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:24,224 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 12:21:24,261 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 12:21:24,268 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 12:21:25,481 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:21:25,517 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:25,523 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:21:25,523 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:21:25,570 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,611 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,655 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,703 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,750 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,801 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,849 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:21:25,856 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:21:25,863 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:21:26,398 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 12:21:26,399 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 12:21:26,447 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 12:21:26,450 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 12:21:26,451 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 12:21:26,453 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 12:21:26,453 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 12:21:26,492 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:26,495 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 12:21:26,497 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 12:21:26,499 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 12:21:26,501 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 12:21:26,501 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 12:21:27,524 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/produits?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:28,332 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 12:21:28,332 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 12:21:28,370 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 12:21:28,373 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 12:21:28,373 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 12:21:28,376 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 12:21:28,376 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 12:21:28,408 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:28,410 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 12:21:28,412 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 12:21:28,415 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 12:21:28,416 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 12:21:28,417 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 12:21:29,525 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/chambres?select=%2A&actif=eq.True&emplacement=eq.boutique "HTTP/2 200 OK"
+2025-08-02 12:21:29,563 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/releves_temperature?select=%2A&date=eq.2025-08-02&chambre_id=in.%283cdcea08-0f29-48bf-9cae-1720c5a07a66%2Ce299526a-1364-4841-bd29-3b60eedecce8%2C7fc0905d-9f52-4401-ae2a-d919d9cee3b1%2C78218ae1-c821-43c3-bd03-d3cd960e8f5a%2Cdd0e725c-e9db-45ad-a5ca-bb0419c277c5%2Cd544a304-e8fd-4ed9-83bb-fef4d9824c7f%29 "HTTP/2 200 OK"
+2025-08-02 12:21:29,638 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/releves_temperature?select=%2A&chambre_id=in.%283cdcea08-0f29-48bf-9cae-1720c5a07a66%2Ce299526a-1364-4841-bd29-3b60eedecce8%2C7fc0905d-9f52-4401-ae2a-d919d9cee3b1%2C78218ae1-c821-43c3-bd03-d3cd960e8f5a%2Cdd0e725c-e9db-45ad-a5ca-bb0419c277c5%2Cd544a304-e8fd-4ed9-83bb-fef4d9824c7f%29&date=in.%282025-08-02%2C2025-08-01%2C2025-07-31%2C2025-07-30%2C2025-07-29%2C2025-07-28%2C2025-07-27%29 "HTTP/2 200 OK"
+2025-08-02 12:21:30,010 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/produits?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:30,078 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/Stock?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:30,129 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/Prod?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:21:30,162 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/Retrait?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:44,781 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:26:45,023 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:45,037 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:26:45,038 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:26:45,137 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,206 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,248 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,298 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,363 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,400 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,465 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:45,471 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:26:45,475 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:26:45,876 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 12:26:45,877 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 12:26:45,916 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:45,918 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 12:26:45,955 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 12:26:45,959 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 12:26:47,595 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:26:47,636 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:47,641 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:26:47,642 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:26:47,683 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,739 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,781 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,825 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,871 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,925 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,983 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:47,991 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:26:47,997 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:26:48,634 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de l'application Facturation
+2025-08-02 12:26:48,634 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des produits de référence
+2025-08-02 12:26:48,669 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/ref_facture?select=id%2Cnom%2Cprix%2Ctva "HTTP/2 200 OK"
+2025-08-02 12:26:48,673 - [GESTION_CLIENTS] - INFO - ÉTAPE: 4 produits chargés
+2025-08-02 12:26:48,674 - [GESTION_CLIENTS] - INFO - ÉTAPE: Affichage de l'éditeur de produits
+2025-08-02 12:26:48,676 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation du DataFrame de facturation
+2025-08-02 12:26:48,677 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de la liste des clients
+2025-08-02 12:26:48,706 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:48,708 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients disponibles
+2025-08-02 12:26:48,710 - [GESTION_CLIENTS] - INFO - ÉTAPE: Initialisation de la session pour le DataFrame de facturation
+2025-08-02 12:26:48,712 - [GESTION_CLIENTS] - INFO - ÉTAPE: Calcul des totaux de la facture
+2025-08-02 12:26:48,714 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total HT calculé: 0.00 €
+2025-08-02 12:26:48,714 - [GESTION_CLIENTS] - INFO - ÉTAPE: Total TTC calculé: 0.00 €
+2025-08-02 12:26:50,050 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:26:50,082 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:50,087 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:26:50,088 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:26:50,170 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,214 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,262 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,317 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,363 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,405 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,449 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:26:50,459 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:26:50,464 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:26:50,716 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Clients
+2025-08-02 12:26:50,718 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des clients
+2025-08-02 12:26:50,755 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:26:50,760 - [GESTION_CLIENTS] - INFO - ÉTAPE: 2 clients récupérés
+2025-08-02 12:26:50,794 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A&id=eq.1 "HTTP/2 200 OK"
+2025-08-02 12:26:50,803 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Clients affichée
+2025-08-02 12:27:08,582 - [GESTION_CLIENTS] - INFO - Utilisateur authentifié avec succès
+2025-08-02 12:27:08,628 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:27:08,694 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:27:08,698 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:27:08,698 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération de toutes les factures
+2025-08-02 12:27:08,730 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/factures?select=num_facture%2Cdate%2Cclient%2Ctot_ttc%2Ctot_ht%2Cpaye%2Cdate_prestation%2Cclients%21inner%28nom%29&inactif=eq.False&order=num_facture.desc "HTTP/2 200 OK"
+2025-08-02 12:27:08,732 - [GESTION_CLIENTS] - INFO - ÉTAPE: 6 factures récupérées
+2025-08-02 12:27:08,732 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:27:08,834 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:08,901 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:08,966 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:09,028 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:09,076 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:09,133 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:09,188 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:09,193 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:27:09,197 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée
+2025-08-02 12:27:23,657 - [GESTION_CLIENTS] - INFO - ÉTAPE: Démarrage de la page Gestion des Factures
+2025-08-02 12:27:23,716 - [GESTION_CLIENTS] - INFO - HTTP Request: GET https://ipddvkydfljhccyvtqpg.supabase.co/rest/v1/clients?select=%2A "HTTP/2 200 OK"
+2025-08-02 12:27:23,723 - [GESTION_CLIENTS] - INFO - ÉTAPE: Récupération des factures
+2025-08-02 12:27:23,724 - [GESTION_CLIENTS] - INFO - ÉTAPE: Vérification de la disponibilité des PDFs dans le storage
+2025-08-02 12:27:23,840 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:23,907 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:23,971 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:24,022 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:24,090 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:24,149 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:24,211 - [GESTION_CLIENTS] - INFO - HTTP Request: POST https://ipddvkydfljhccyvtqpg.supabase.co/storage/v1/object/list/factures "HTTP/2 200 OK"
+2025-08-02 12:27:24,219 - [GESTION_CLIENTS] - INFO - ÉTAPE: Statistiques calculées - 6 factures, Total: 588.00€, Reste à payer: 588.00€
+2025-08-02 12:27:24,223 - [GESTION_CLIENTS] - INFO - ÉTAPE: Page Gestion des Factures affichée

@@ -1,10 +1,22 @@
 import streamlit as st
+
+# Configuration de la page - DOIT être en premier
+st.set_page_config(layout="wide", page_title="Facturation AG-Grid")
+
 import pandas as pd
 import logging
+from utils.auth import require_auth, show_auth_status
 from utils.get_data import get_ref_products
 from utils.get_data import get_clients
 from utils.get_data import save_product_changes_from_session
 from utils.invoice_maker import invoice_maker
+
+# Vérification de l'authentification
+if not require_auth():
+    st.stop()
+
+# Afficher le statut d'authentification dans la sidebar
+show_auth_status()
 
 # Configuration du logging
 logging.basicConfig(
@@ -152,10 +164,6 @@ def df_on_change():
 
     st.session_state["df"] = st.session_state["df"].reset_index(drop=True)
     logger.info("ÉTAPE: Fin de df_on_change - DataFrame mis à jour et réinitialisé")
-
-
-
-st.set_page_config(layout="wide", page_title="Facturation AG-Grid")
 
 logger.info("ÉTAPE: Démarrage de l'application Facturation")
 logger.info("ÉTAPE: Récupération des produits de référence")

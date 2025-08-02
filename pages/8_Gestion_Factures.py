@@ -1,7 +1,19 @@
 import streamlit as st
+
+# Configuration de la page - DOIT être en premier
+st.set_page_config(layout="wide", page_title="Gestion des Factures")
+
 import pandas as pd
 import logging
 from datetime import datetime, timedelta
+from utils.auth import require_auth, show_auth_status
+
+# Vérification de l'authentification
+if not require_auth():
+    st.stop()
+
+# Afficher le statut d'authentification dans la sidebar
+show_auth_status()
 
 # Vider le cache au démarrage si nécessaire
 if hasattr(st, 'cache_data'):
@@ -19,8 +31,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-st.set_page_config(layout="wide", page_title="Gestion des Factures")
 
 st.title("🧾 Gestion des Factures")
 

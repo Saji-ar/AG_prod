@@ -1,7 +1,19 @@
 import streamlit as st
+
+# Configuration de la page - DOIT être en premier
+st.set_page_config(layout="wide", page_title="Gestion des Clients")
+
 import pandas as pd
 import logging
+from utils.auth import require_auth, show_auth_status
 from utils.get_data import get_clients, add_client, update_client, delete_client, get_client_details, search_clients
+
+# Vérification de l'authentification
+if not require_auth():
+    st.stop()
+
+# Afficher le statut d'authentification dans la sidebar
+show_auth_status()
 
 # Configuration du logging
 logging.basicConfig(
@@ -13,8 +25,6 @@ logging.basicConfig(
     ]
 )
 logger = logging.getLogger(__name__)
-
-st.set_page_config(layout="wide", page_title="Gestion des Clients")
 
 st.title("👥 Gestion des Clients")
 
