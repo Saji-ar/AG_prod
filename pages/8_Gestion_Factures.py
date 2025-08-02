@@ -245,22 +245,58 @@ with col2:
 if len(factures_df) > 0:
     st.header("📊 Statistiques")
     
-    col1, col2, col3, col4 = st.columns(4)
+    # Calculs des statistiques
+    total_factures = len(factures_df)
+    factures_payees = len(factures_df[factures_df["paye"] == True])
+    factures_impayees = len(factures_df[factures_df["paye"] == False])
+    
+    # Calculs financiers
+    total_ttc = factures_df["tot_ttc"].sum()
+    total_paye = factures_df[factures_df["paye"] == True]["tot_ttc"].sum()
+    reste_a_payer = factures_df[factures_df["paye"] == False]["tot_ttc"].sum()
+    
+    logger.info(f"ÉTAPE: Statistiques calculées - {total_factures} factures, Total: {total_ttc:.2f}€, Reste à payer: {reste_a_payer:.2f}€")
+    
+    col1, col2, col3, col4, col5 = st.columns(5)
     
     with col1:
-        total_factures = len(factures_df)
         st.metric("Total Factures", total_factures)
     
     with col2:
-        factures_payees = len(factures_df[factures_df["paye"] == True])
         st.metric("Factures Payées", factures_payees)
     
     with col3:
-        factures_impayees = len(factures_df[factures_df["paye"] == False])
         st.metric("Factures Impayées", factures_impayees)
     
     with col4:
-        total_ttc = factures_df["tot_ttc"].sum()
         st.metric("Total TTC", f"{total_ttc:.2f} €")
+    
+    with col5:
+        st.metric(
+            "Reste à Payer", 
+            f"{reste_a_payer:.2f} €",
+            delta=f"-{total_paye:.2f} €" if total_paye > 0 else None
+        )
+    
+    # Affichage supplémentaire avec pourcentages
+    st.subheader("📈 Répartition des paiements")
+    
+    col_left, col_right = st.columns(2)
+    
+    with col_left:
+        if total_ttc > 0:
+            pourcentage_paye = (total_paye / total_ttc) * 100
+            pourcentage_impaye = (reste_a_payer / total_ttc) * 100
+            
+            st.success(f"💰 **Montant payé :** {total_paye:.2f} € ({pourcentage_paye:.1f}%)")
+            st.error(f"⏳ **Reste à payer :** {reste_a_payer:.2f} € ({pourcentage_impaye:.1f}%)")
+    
+    with col_right:
+        # Graphique simple avec des barres de progression
+        if total_ttc > 0:
+            progress_paye = total_paye / total_ttc
+            st.write("**Progression des paiements**")
+            st.progress(progress_paye)
+            st.caption(f"{pourcentage_paye:.1f}% des factures sont payées")
 
 logger.info("ÉTAPE: Page Gestion des Factures affichée")
