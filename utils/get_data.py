@@ -84,7 +84,6 @@ def get_next_facture_number():
     # Filtrer les factures de l'année courante
     current_year_factures = []
     has_current_year_factures = False
-    
     for f in response.data:
         facture_num_str = str(f['num_facture'])
         if facture_num_str.startswith(str(current_year)):
@@ -302,3 +301,247 @@ def save_product_changes_from_session(product_session_state, current_product_df)
             "changes": None,
             "error": str(e)
         }
+
+def get_all_factures():
+    """
+    Récupère toutes les factures actives avec les informations des clients
+    
+    Returns:
+        pd.DataFrame: DataFrame avec les factures et informations clients
+    """
+    try:
+        # Récupérer les factures avec jointure sur la table clients
+        response = supabase.table('factures').select(
+            'num_facture, date, client, tot_ttc, tot_ht, paye, date_prestation, clients!inner(nom)'
+        ).eq('inactif', False).order('num_facture', desc=True).execute()
+        
+        data = response.data or []
+        
+        # Transformer les données pour un affichage plus facile
+        factures_list = []
+        for facture in data:
+            factures_list.append({
+                'num_facture': facture['num_facture'],
+                'date': facture['date'],
+                'client_id': facture['client'],
+                'client_nom': facture['clients']['nom'] if facture['clients'] else 'Client inconnu',
+                'date_prestation': facture['date_prestation'],
+                'tot_ht': facture['tot_ht'],
+                'tot_ttc': facture['tot_ttc'],
+                'paye': facture['paye']
+            })
+        
+        return pd.DataFrame(factures_list)
+        
+    except Exception as e:
+        print(f"Erreur lors de la récupération des factures: {e}")
+        return pd.DataFrame()
+
+def update_facture_paiement(num_facture, paye_status):
+    """
+    Met à jour le statut de paiement d'une facture
+    
+    Args:
+        num_facture: Numéro de la facture
+        paye_status: True si payée, False sinon
+    
+    Returns:
+        dict: {"success": bool, "error": str}
+    """
+    try:
+        result = supabase.table('factures').update({
+            'paye': paye_status
+        }).eq('num_facture', num_facture).execute()
+        
+        return {
+            "success": True,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+def soft_delete_facture(num_facture):
+    """
+    Marque une facture comme inactive (suppression logique)
+    
+    Args:
+        num_facture: Numéro de la facture à désactiver
+    
+    Returns:
+        dict: {"success": bool, "error": str}
+    """
+    try:
+        result = supabase.table('factures').update({
+            'inactif': True
+        }).eq('num_facture', num_facture).execute()
+        
+        return {
+            "success": True,
+            "error": None
+        }
+        
+    except Exception as e:
+        return {
+            "success": False,
+            "error": str(e)
+        }
+
+def get_factures_filtered(client_nom=None, date_debut=None, date_fin=None):
+    """
+    Récupère les factures avec filtres
+    
+    Args:
+        client_nom: Nom du client (optionnel)
+        date_debut: Date de début (optionnel)
+        date_fin: Date de fin (optionnel)
+    
+    Returns:
+        pd.DataFrame: DataFrame filtré des factures
+    """
+    try:
+        # Requête de base avec jointure
+        query = supabase.table('factures').select(
+            'num_facture, date, client, tot_ttc, tot_ht, paye, date_prestation, clients!inner(nom)'
+        ).eq('inactif', False)
+        
+        # Filtrer par date si spécifié
+        if date_debut:
+            query = query.gte('date', date_debut.strftime('%Y-%m-%d'))
+        if date_fin:
+            query = query.lte('date', date_fin.strftime('%Y-%m-%d'))
+        
+        response = query.order('num_facture', desc=True).execute()
+        data = response.data or []
+        
+        # Transformer les données
+        factures_list = []
+        for facture in data:
+            client_nom_facture = facture['clients']['nom'] if facture['clients'] else 'Client inconnu'
+            
+            # Filtrer par nom client si spécifié
+            if client_nom and client_nom.lower() not in client_nom_facture.lower():
+                continue
+                
+            factures_list.append({
+                'num_facture': facture['num_facture'],
+                'date': facture['date'],
+                'client_id': facture['client'],
+                'client_nom': client_nom_facture,
+                'date_prestation': facture['date_prestation'],
+                'tot_ht': facture['tot_ht'],
+                'tot_ttc': facture['tot_ttc'],
+                'paye': facture['paye']
+            })
+        
+        return pd.DataFrame(factures_list)
+        
+    except Exception as e:
+        print(f"Erreur lors de la récupération des factures filtrées: {e}")
+        return pd.DataFrame()
+
+def download_facture_from_storage(num_facture):
+    """
+    Télécharge une facture depuis le bucket Supabase Storage
+    
+    Args:
+        num_facture: Numéro de la facture
+    
+    Returns:
+        dict: {"success": bool, "data": bytes, "filename": str, "error": str}
+    """
+    try:
+        # Nom du fichier dans le storage (format à adapter selon votre convention)
+        filename = f"facture_{num_facture}.pdf"
+        
+        # Télécharger le fichier depuis le bucket 'factures'
+        result = supabase.storage.from_("factures").download(filename)
+        
+        if result:
+            return {
+                "success": True,
+                "data": result,
+                "filename": filename,
+                "error": None
+            }
+        else:
+            return {
+                "success": False,
+                "data": None,
+                "filename": None,
+                "error": "Fichier non trouvé dans le storage"
+            }
+            
+    except Exception as e:
+        return {
+            "success": False,
+            "data": None,
+            "filename": None,
+            "error": str(e)
+        }
+
+def list_factures_in_storage():
+    """
+    Liste tous les fichiers de factures disponibles dans le storage
+    
+    Returns:
+        dict: {"success": bool, "files": list, "error": str}
+    """
+    try:
+        # Lister les fichiers dans le bucket 'factures'
+        result = supabase.storage.from_("factures").list()
+        
+        if result:
+            # Filtrer pour ne garder que les fichiers PDF de factures
+            facture_files = [
+                file for file in result 
+                if file['name'].startswith('facture_') and file['name'].endswith('.pdf')
+            ]
+            
+            return {
+                "success": True,
+                "files": facture_files,
+                "error": None
+            }
+        else:
+            return {
+                "success": True,
+                "files": [],
+                "error": None
+            }
+            
+    except Exception as e:
+        return {
+            "success": False,
+            "files": [],
+            "error": str(e)
+        }
+
+def check_facture_exists_in_storage(num_facture):
+    """
+    Vérifie si une facture existe dans le storage
+    
+    Args:
+        num_facture: Numéro de la facture
+    
+    Returns:
+        bool: True si le fichier existe, False sinon
+    """
+    try:
+        filename = f"facture_{num_facture}.pdf"
+        
+        # Lister les fichiers et vérifier la présence
+        result = supabase.storage.from_("factures").list()
+        
+        if result:
+            filenames = [file['name'] for file in result]
+            return filename in filenames
+        
+        return False
+        
+    except Exception as e:
+        print(f"Erreur lors de la vérification d'existence: {e}")
+        return False
