@@ -288,7 +288,7 @@ if st.button("Générer la facture") :
         # Mettre à jour la session avec les données nettoyées
         st.session_state["df"] = cleaned_df
         
-        pdf_filename, insert = invoice_maker(r"template_facture_ASD11.xlsx","data/test.xlsx",cleaned_df,clients.loc[clients["nom"] == client].iloc[0],data_presta,
+        pdf_filename, insert = invoice_maker(None,"data/test.xlsx",cleaned_df,clients.loc[clients["nom"] == client].iloc[0],data_presta,
                                              cleaned_total_ttc, cleaned_total_ht)
         logger.info(f"ÉTAPE: Facture générée - Nom du fichier: {pdf_filename}")
         logger.info(f"ÉTAPE: Données insertées: {insert}")

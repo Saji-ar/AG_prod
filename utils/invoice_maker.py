@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 from openpyxl.utils.cell import coordinate_from_string, column_index_from_string
 import re
 from io import BytesIO
-from utils.get_data import upload_file_to_bucket, get_next_facture_number, insert_facture, insert_ligne_facture, delete_facture_and_lines
+from utils.get_data import upload_file_to_bucket, get_next_facture_number, insert_facture, insert_ligne_facture, delete_facture_and_lines, download_template_from_storage
 import convertapi
 import streamlit as st
 from datetime import datetime
@@ -12,13 +12,13 @@ import supabase  # Assumant que vous utilisez Supabase comme base de données
 # Ces fonctions sont maintenant importées depuis utils.get_data
 
 
-def invoice_maker(template_path,
-                  output_path,
-                  df,                        # DataFrame ['produit','prix','quantité','tva']
-                  client_info,               # [nom, adresse, contact]
-                  date_prestation,           # ex. '2025-07-23'
-                  total_ttc,
-                  total_ht):
+def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilité mais non utilisé
+                  output_path=None,       # Paramètre conservé pour compatibilité mais non utilisé
+                  df=None,                # DataFrame ['produit','prix','quantité','tva']
+                  client_info=None,       # [nom, adresse, contact]
+                  date_prestation=None,   # ex. '2025-07-23'
+                  total_ttc=None,
+                  total_ht=None):
     """
     Crée une facture Excel/PDF et insère les données dans la base de données
     
@@ -31,8 +31,17 @@ def invoice_maker(template_path,
     pdf_filename = filename.replace('.xlsx', '.pdf')
     
     try:
-        # 1. Charger le modèle et désactiver le mode template
-        wb = load_workbook(template_path)
+        # 1. Télécharger le template depuis Supabase Storage
+        template_result = download_template_from_storage("template.xlsx")
+        if not template_result["success"]:
+            print(f"Erreur lors du téléchargement du template: {template_result['error']}")
+            return pdf_filename, False
+        
+        # Créer un BytesIO depuis les données du template
+        template_data = BytesIO(template_result["data"])
+        
+        # Charger le modèle et désactiver le mode template
+        wb = load_workbook(template_data)
         wb.template = False
         ws = wb.active
         print(df)

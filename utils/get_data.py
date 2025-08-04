@@ -474,6 +474,42 @@ def download_facture_from_storage(num_facture):
                 "filename": None,
                 "error": "Fichier non trouvé dans le storage"
             }
+    except Exception as e:
+        return {
+            "success": False,
+            "data": None,
+            "filename": None,
+            "error": str(e)
+        }
+
+def download_template_from_storage(template_filename="template.xlsx"):
+    """
+    Télécharge un template depuis le bucket Supabase Storage
+    
+    Args:
+        template_filename: Nom du fichier template
+    
+    Returns:
+        dict: {"success": bool, "data": bytes, "filename": str, "error": str}
+    """
+    try:
+        # Télécharger le fichier template depuis le bucket 'factures'
+        result = supabase.storage.from_("factures").download(template_filename)
+        
+        if result:
+            return {
+                "success": True,
+                "data": result,
+                "filename": template_filename,
+                "error": None
+            }
+        else:
+            return {
+                "success": False,
+                "data": None,
+                "filename": None,
+                "error": f"Template '{template_filename}' non trouvé dans le storage"
+            }
             
     except Exception as e:
         return {
