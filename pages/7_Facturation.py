@@ -219,7 +219,7 @@ st.data_editor(
     num_rows="dynamic",
     hide_index=True,
     column_config={
-        "Produit": st.column_config.SelectboxColumn(options=product["nom"])
+        "Produit": st.column_config.SelectboxColumn(options=product["nom"].tolist())
     },
     column_order=["Produit","Quantité", "Prix unitaire", "TVA", "Prix total HT"]
 )
@@ -288,24 +288,24 @@ if st.button("Générer la facture") :
         # Mettre à jour la session avec les données nettoyées
         st.session_state["df"] = cleaned_df
         
-        pdf_filename, insert = invoice_maker(None,"data/test.xlsx",cleaned_df,clients.loc[clients["nom"] == client].iloc[0],data_presta,
+        xlsx_filename, insert = invoice_maker(None,"data/test.xlsx",cleaned_df,clients.loc[clients["nom"] == client].iloc[0],data_presta,
                                              cleaned_total_ttc, cleaned_total_ht)
-        logger.info(f"ÉTAPE: Facture générée - Nom du fichier: {pdf_filename}")
+        logger.info(f"ÉTAPE: Facture générée - Nom du fichier: {xlsx_filename}")
         logger.info(f"ÉTAPE: Données insertées: {insert}")
         st.write(insert)
         st.success("✅ Facture générée avec succès")
         
-        logger.info("ÉTAPE: Lecture du fichier PDF généré")
-        with open('data/temp.pdf', 'rb') as pdf_file:
-            pdf_data = pdf_file.read()
-        logger.info(f"ÉTAPE: PDF lu, taille: {len(pdf_data)} bytes")
+        logger.info("ÉTAPE: Lecture du fichier Excel généré")
+        with open('data/temp.xlsx', 'rb') as xlsx_file:
+            xlsx_data = xlsx_file.read()
+        logger.info(f"ÉTAPE: Excel lu, taille: {len(xlsx_data)} bytes")
         
-        st.write(pdf_filename)
+        st.write(xlsx_filename)
         st.download_button(
-            label="Télécharger PDF",
-            data=pdf_data,
-            file_name=pdf_filename,
-            mime="application/pdf"
+            label="Télécharger Excel",
+            data=xlsx_data,
+            file_name=xlsx_filename,
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             )
         logger.info("ÉTAPE: Bouton de téléchargement affiché")
         

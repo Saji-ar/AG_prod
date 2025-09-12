@@ -3,10 +3,7 @@ from openpyxl.utils.cell import coordinate_from_string, column_index_from_string
 import re
 from io import BytesIO
 from utils.get_data import upload_file_to_bucket, get_next_facture_number, insert_facture, insert_ligne_facture, delete_facture_and_lines, download_template_from_storage
-import convertapi
-import streamlit as st
 from datetime import datetime
-import supabase  # Assumant que vous utilisez Supabase comme base de données
 
 
 # Ces fonctions sont maintenant importées depuis utils.get_data
@@ -20,7 +17,16 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
                   total_ttc=None,
                   total_ht=None):
     """
-    Crée une facture Excel/PDF et insère les données dans la base de données
+    Crée une facture Excel et insère les données dans la base de données
+    
+    Args:
+        template_path: Non utilisé (conservé pour compatibilité)
+        output_path: Non utilisé (conservé pour compatibilité)
+        df: DataFrame avec les lignes de facture
+        client_info: Informations du client
+        date_prestation: Date de prestation
+        total_ttc: Total TTC
+        total_ht: Total HT
     
     Returns:
         tuple: (filename, success) où success est True si toutes les insertions ont réussi
@@ -28,14 +34,13 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
     
     num_facture = get_next_facture_number()
     filename = f"facture_{num_facture}.xlsx"
-    pdf_filename = filename.replace('.xlsx', '.pdf')
     
     try:
         # 1. Télécharger le template depuis Supabase Storage
         template_result = download_template_from_storage("template.xlsx")
         if not template_result["success"]:
             print(f"Erreur lors du téléchargement du template: {template_result['error']}")
-            return pdf_filename, False
+            return filename, False
         
         # Créer un BytesIO depuis les données du template
         template_data = BytesIO(template_result["data"])
@@ -99,28 +104,18 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
         new_end = end_row + len(df)-1
         table.ref = f"{start_col}{start_row}:{end_col}{new_end}"
         
-        # 8. Générer les fichiers Excel et PDF
-        convertapi.api_credentials = st.secrets["CONVERTAPI"]
-
+        # 8. Générer et stocker uniquement le fichier Excel
         file_content = BytesIO()
         wb.save(file_content)
         file_content.seek(0)
 
-        # Upload XLSX
+        # Upload XLSX vers Supabase
         result_xlsx = upload_file_to_bucket(file_content.getvalue(), filename)
         print(f"Upload XLSX: {result_xlsx}")
 
-        # Sauvegarder xlsx temporairement pour conversion
+        # Sauvegarder xlsx temporairement pour téléchargement utilisateur
         with open("data/temp.xlsx", 'wb') as f:
             f.write(file_content.getvalue())
-
-        result = convertapi.convert('pdf', { 'File': 'data/temp.xlsx' })
-        result.file.save('data/temp.pdf')
-        
-        # Upload PDF
-        with open('data/temp.pdf', 'rb') as pdf_file:
-            result_pdf = upload_file_to_bucket(pdf_file.read(), pdf_filename)
-        print(f"Upload PDF: {result_pdf}")
 
         # 9. Insérer la facture principale dans la base de données
         print(f"Insertion facture - TTC: {total_ttc}, HT: {total_ht}")
@@ -136,7 +131,7 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
         
         if not insertion_facture["success"]:
             print(f"Erreur lors de l'insertion de la facture principale: {insertion_facture['error']}")
-            return pdf_filename, False
+            return filename, False
 
         # 10. Insérer toutes les lignes de facture
         lignes_inserees = []
@@ -164,10 +159,10 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
             delete_result = delete_facture_and_lines(num_facture)
             if not delete_result["success"]:
                 print(f"Erreur lors du rollback: {delete_result['error']}")
-            return pdf_filename, False
+            return filename, False
         
         print(f"Toutes les insertions ont réussi pour la facture {num_facture}")
-        return pdf_filename, True
+        return filename, True
         
     except Exception as e:
         print(f"Erreur générale dans invoice_maker: {e}")
@@ -176,4 +171,4 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
             delete_facture_and_lines(num_facture)
         except:
             pass
-        return pdf_filename, False
+        return filename, False
