@@ -109,9 +109,14 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
         wb.save(file_content)
         file_content.seek(0)
 
-        # Upload XLSX vers Supabase
+        # Upload XLSX vers Supabase (avec gestion des doublons)
         result_xlsx = upload_file_to_bucket(file_content.getvalue(), filename)
         print(f"Upload XLSX: {result_xlsx}")
+        
+        # Si le fichier existe déjà, on continue quand même (le fichier Excel local sera créé)
+        if not result_xlsx["success"] and "already exists" not in str(result_xlsx.get("error", "")):
+            print(f"Erreur critique lors de l'upload: {result_xlsx['error']}")
+            # On peut continuer même si l'upload échoue, car on a le fichier local
 
         # Sauvegarder xlsx temporairement pour téléchargement utilisateur
         with open("data/temp.xlsx", 'wb') as f:
@@ -125,7 +130,7 @@ def invoice_maker(template_path=None,  # Paramètre conservé pour compatibilit�
             client_id=int(client_info["id"]),
             tot_ttc=float(total_ttc),
             tot_ht=float(total_ht),
-            date_prestation=date_prestation if date_prestation is not None else None,
+            date_prestation=date_prestation.strftime("%Y-%m-%d") if date_prestation is not None else None,
             paye=False
         )
         
