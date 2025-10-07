@@ -128,7 +128,7 @@ else:
         column_config=column_config,
         disabled=["num_facture", "date", "client_nom", "date_prestation", "tot_ht", "tot_ttc", "fichier_disponible"],
         hide_index=True,
-        width="stretch",  # ⚠️ remplacement de use_container_width=True
+        use_container_width=True,  # ✅ garde ton paramètre d'origine
         key="factures_editor"
     )
 
