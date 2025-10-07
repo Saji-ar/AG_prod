@@ -443,21 +443,17 @@ def get_factures_filtered(client_nom=None, date_debut=None, date_fin=None):
         print(f"Erreur lors de la récupération des factures filtrées: {e}")
         return pd.DataFrame()
 
-def download_facture_from_storage(num_facture):
+def download_facture_from_storage(filename):
     """
-    Télécharge une facture depuis le bucket Supabase Storage
+    Télécharge un fichier (PDF ou Excel) depuis le bucket Supabase Storage.
     
     Args:
-        num_facture: Numéro de la facture
+        filename (str): Nom complet du fichier (ex: "facture_123.pdf" ou "facture_123.xlsx")
     
     Returns:
         dict: {"success": bool, "data": bytes, "filename": str, "error": str}
     """
     try:
-        # Nom du fichier dans le storage (format à adapter selon votre convention)
-        filename = f"facture_{num_facture}.pdf"
-        
-        # Télécharger le fichier depuis le bucket 'factures'
         result = supabase.storage.from_("factures").download(filename)
         
         if result:
@@ -471,16 +467,17 @@ def download_facture_from_storage(num_facture):
             return {
                 "success": False,
                 "data": None,
-                "filename": None,
+                "filename": filename,
                 "error": "Fichier non trouvé dans le storage"
             }
     except Exception as e:
         return {
             "success": False,
             "data": None,
-            "filename": None,
+            "filename": filename,
             "error": str(e)
         }
+
 
 def download_template_from_storage(template_filename="template.xlsx"):
     """
@@ -556,31 +553,29 @@ def list_factures_in_storage():
             "error": str(e)
         }
 
-def check_facture_exists_in_storage(num_facture):
+def check_facture_exists_in_storage(filename):
     """
-    Vérifie si une facture existe dans le storage
-    
+    Vérifie si un fichier (PDF ou Excel) existe dans le storage Supabase.
+
     Args:
-        num_facture: Numéro de la facture
-    
+        filename (str): Nom exact du fichier à vérifier (ex: "facture_123.pdf" ou "facture_123.xlsx")
+
     Returns:
         bool: True si le fichier existe, False sinon
     """
     try:
-        filename = f"facture_{num_facture}.pdf"
-        
-        # Lister les fichiers et vérifier la présence
         result = supabase.storage.from_("factures").list()
-        
+
         if result:
-            filenames = [file['name'] for file in result]
+            filenames = [file["name"] for file in result]
             return filename in filenames
-        
+
         return False
-        
+
     except Exception as e:
         print(f"Erreur lors de la vérification d'existence: {e}")
         return False
+
 
 def add_client(nom, adresse_1=None, adresse_2=None, telephone=None):
     """
