@@ -1,5 +1,9 @@
 import streamlit as st
 from utils.auth import show_auth_status, is_authenticated
+import os
+
+# Crée le dossier "data" si nécessaire
+os.makedirs("data", exist_ok=True)
 
 st.set_page_config(page_title="Gestion de Pâtisserie", layout="wide")
 
