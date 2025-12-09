@@ -7,6 +7,7 @@ __pycache__/
 *.xlsx
 service_account.json
 secrets.toml
+.streamlit/
 .venv/
 venv/
 ENV/
